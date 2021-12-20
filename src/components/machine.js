@@ -22,12 +22,11 @@ const Machine = () => {
       }, 100);
     }
 
-    if(ovenDegrees >= 220 && !conveyorWorking) setConveyorWorking(true);
+    if (ovenDegrees >= 220 && !conveyorWorking) setConveyorWorking(true);
 
-    if(switchState!=="ON") {
-        setConveyorWorking(false)
+    if (switchState !== "ON") {
+      setConveyorWorking(false);
     }
-
   }, [switchState, ovenDegrees, conveyorWorking]);
 
   return (
