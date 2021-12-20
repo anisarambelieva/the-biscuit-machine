@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
+import Biscuit from "./biscuit/biscuit.js";
 import Conveyor from "./conveyor";
 import Oven from "./oven";
 import Switch from "./switch";
@@ -38,6 +39,7 @@ const Machine = () => {
         Check oven degrees
       </Button>
       <Conveyor conveyorWorking={conveyorWorking.toString()}></Conveyor>
+      <Biscuit/>
     </>
   );
 };
