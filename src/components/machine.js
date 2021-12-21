@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import Biscuit from "./biscuit/biscuit.js";
 import Conveyor from "./conveyor";
@@ -9,6 +9,8 @@ const Machine = () => {
   const [switchState, setSwitchState] = useState("OFF");
   const [ovenDegrees, setOvenDegrees] = useState(0);
   const [conveyorWorking, setConveyorWorking] = useState(false);
+  const [secondBiscuit, setSecondBiscuit] = useState(false);
+  const [thirdBiscuit, setThirdBiscuit] = useState(false);
 
   // if the switch is turned on, preheat oven to 240 degrees and then stop
   // if the switch is off, start decreasing the degrees
@@ -30,6 +32,9 @@ const Machine = () => {
     }
   }, [switchState, ovenDegrees, conveyorWorking]);
 
+  const createBiscuit = () => setSecondBiscuit(true);
+  const createThirdBiscuit = () => setThirdBiscuit(true);
+
   return (
     <>
       <Oven ovenDegrees={ovenDegrees}></Oven>
@@ -38,8 +43,23 @@ const Machine = () => {
       <Button onClick={() => console.log(ovenDegrees)}>
         Check oven degrees
       </Button>
+      <Button onClick={createBiscuit}>Create second Biscuit</Button>
+      <Button onClick={createThirdBiscuit}>Create third Biscuit</Button>
       <Conveyor conveyorWorking={conveyorWorking.toString()}></Conveyor>
-      <Biscuit/>
+
+      <div
+        className="biscuits"
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          width: "80%",
+          position: "relative",
+        }}
+      >
+        <Biscuit />
+        {secondBiscuit && <Biscuit />}
+        {thirdBiscuit && <Biscuit />}
+      </div>
     </>
   );
 };
