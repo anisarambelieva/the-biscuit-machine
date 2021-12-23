@@ -36,6 +36,10 @@ const Machine = () => (
         Biscuit
       </Col>
     </Row>
+
+    <Row style={{ marginTop: "10px" }}>
+      <Col md="6" style={{ backgroundColor: "lightGray" }}>Conveyor</Col>
+    </Row>
   </Container>
 );
 
