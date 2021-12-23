@@ -1,4 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
+import Switch from "./switch";
 
 const Machine = () => (
   <Container>
@@ -52,7 +53,9 @@ const Machine = () => (
 
     <Row>
       <Col md="1" style={{ backgroundColor: "lightGray" }}>Motor</Col>
-      <Col md={{ span: 1, offset: 3 }} style={{ backgroundColor: "lightGray" }}>Switch</Col>
+      <Col md={{ span: 2, offset: 2 }} style={{ backgroundColor: "lightGray" }}>
+          <Switch/>
+      </Col>
     </Row>
   </Container>
 );
