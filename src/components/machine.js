@@ -40,6 +40,10 @@ const Machine = () => (
     <Row style={{ marginTop: "10px" }}>
       <Col md="6" style={{ backgroundColor: "lightGray" }}>Conveyor</Col>
     </Row>
+
+    <Row style={{ marginTop: "20px" }}>
+      <Col md={{ span: 1, offset: 6 }} style={{ backgroundColor: "lightGray" }}>Container</Col>
+    </Row>
   </Container>
 );
 
