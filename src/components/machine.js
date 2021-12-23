@@ -20,18 +20,23 @@ const Machine = () => (
       <Col md="1" style={{ backgroundColor: "yellow" }}>
         Biscuit
       </Col>
+
       <Col md="1" style={{ backgroundColor: "lightGray" }}>
         Biscuit
       </Col>
+
       <Col md="1" style={{ backgroundColor: "yellow" }}>
         Biscuit
       </Col>
+
       <Col md="1" style={{ backgroundColor: "lightGray" }}>
         Biscuit
       </Col>
+
       <Col md="1" style={{ backgroundColor: "yellow" }}>
         Biscuit
       </Col>
+
       <Col md="1" style={{ backgroundColor: "lightGray" }}>
         Biscuit
       </Col>
