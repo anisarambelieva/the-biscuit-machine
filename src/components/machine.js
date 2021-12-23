@@ -44,6 +44,11 @@ const Machine = () => (
     <Row style={{ marginTop: "20px" }}>
       <Col md={{ span: 1, offset: 6 }} style={{ backgroundColor: "lightGray" }}>Container</Col>
     </Row>
+
+    <Row>
+      <Col md="1" style={{ backgroundColor: "lightGray" }}>Motor</Col>
+      <Col md={{ span: 1, offset: 3 }} style={{ backgroundColor: "lightGray" }}>Switch</Col>
+    </Row>
   </Container>
 );
 
