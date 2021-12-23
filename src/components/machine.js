@@ -2,7 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const Machine = () => (
   <Container>
-    <Row>
+    <Row style={{ marginTop: "10px" }}>
       <Col md="1" style={{ backgroundColor: "lightGray" }}>
         Extruder
       </Col>
