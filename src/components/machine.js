@@ -67,7 +67,7 @@ const Machine = () => {
 
       <Row>
         <Col md="1" style={{ backgroundColor: "lightGray" }}>
-          Motor
+          Motor: {state === "On" ? "working" : "not working"}
         </Col>
         <Col
           md={{ span: 2, offset: 2 }}
