@@ -43,7 +43,10 @@ const Machine = () => {
           md={{ span: 2, offset: 1 }}
           style={{ backgroundColor: "lightGray" }}
         >
-          <Oven ovenDegrees={ovenDegrees} heatingElement={heatingElement.toString()}/>
+          <Oven
+            ovenDegrees={ovenDegrees}
+            heatingElement={heatingElement.toString()}
+          />
         </Col>
       </Row>
 
