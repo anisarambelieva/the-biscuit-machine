@@ -6,14 +6,17 @@ import Switch from "./switch";
 const Machine = () => {
   const [state, setState] = useState("Off");
   const [ovenDegrees, setOvenDegrees] = useState(0);
+  const [heatingElement, setHeatingElement] = useState(false);
 
   useEffect(() => {
     if (state === "On" && ovenDegrees < 240) {
+      if (!heatingElement) setHeatingElement(true);
+
       setTimeout(() => {
         setOvenDegrees(ovenDegrees + 1);
       }, 1000);
     }
-  }, [state, ovenDegrees]);
+  }, [state, ovenDegrees, heatingElement]);
 
   return (
     <Container>
@@ -30,7 +33,7 @@ const Machine = () => {
           md={{ span: 2, offset: 1 }}
           style={{ backgroundColor: "lightGray" }}
         >
-          <Oven ovenDegrees={ovenDegrees} />
+          <Oven ovenDegrees={ovenDegrees} heatingElement={heatingElement.toString()}/>
         </Col>
       </Row>
 
