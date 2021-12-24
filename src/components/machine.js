@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import Oven from "./oven";
 import Switch from "./switch";
 
 const Machine = () => {
   const [state, setState] = useState("Off");
+  const [ovenDegrees, setOvenDegrees] = useState(0);
 
   return (
     <Container>
@@ -20,7 +22,7 @@ const Machine = () => {
           md={{ span: 2, offset: 1 }}
           style={{ backgroundColor: "lightGray" }}
         >
-          Oven
+          <Oven ovenDegrees={ovenDegrees}/>
         </Col>
       </Row>
 
