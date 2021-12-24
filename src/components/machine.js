@@ -30,7 +30,7 @@ const Machine = () => {
           md={{ span: 2, offset: 1 }}
           style={{ backgroundColor: "lightGray" }}
         >
-          <Oven ovenDegrees={ovenDegrees}/>
+          <Oven ovenDegrees={ovenDegrees} />
         </Col>
       </Row>
 
