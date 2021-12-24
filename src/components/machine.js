@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Oven from "./oven";
 import Switch from "./switch";
@@ -6,6 +6,14 @@ import Switch from "./switch";
 const Machine = () => {
   const [state, setState] = useState("Off");
   const [ovenDegrees, setOvenDegrees] = useState(0);
+
+  useEffect(() => {
+    if (state === "On" && ovenDegrees < 240) {
+      setTimeout(() => {
+        setOvenDegrees(ovenDegrees + 1);
+      }, 1000);
+    }
+  }, [state, ovenDegrees]);
 
   return (
     <Container>
