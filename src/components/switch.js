@@ -1,12 +1,17 @@
 import { Button } from "react-bootstrap";
+import styled from 'styled-components';
+
+const SwitchButton = styled(Button)`
+    padding: 0 3px;
+`
 
 const Switch = ({ onChange }) => {
   return (
     <div style={{padding: '5px'}}>
       <p>Switch</p>
-      <Button onClick={() => onChange('On')} style={{padding: '0 3px', marginRight: '5px'}}>On</Button>
-      <Button onClick={() => onChange('Paused')} style={{padding: '0 3px',  marginRight: '5px'}}>Paused</Button>
-      <Button onClick={() => onChange('Off')} style={{padding: '0 3px'}}>Off</Button>
+      <SwitchButton onClick={() => onChange('On')} style={{marginRight: '5px'}}>On</SwitchButton>
+      <SwitchButton onClick={() => onChange('Paused')} style={{ marginRight: '5px'}}>Paused</SwitchButton>
+      <SwitchButton onClick={() => onChange('Off')}>Off</SwitchButton>
     </div>
   );
 };
