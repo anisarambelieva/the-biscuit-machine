@@ -73,7 +73,7 @@ const Machine = () => {
           md={{ span: 2, offset: 2 }}
           style={{ backgroundColor: "lightGray" }}
         >
-          <Switch />
+          <Switch onChange={setState} />
         </Col>
       </Row>
     </Container>
