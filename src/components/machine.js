@@ -51,7 +51,7 @@ const Machine = () => {
         </Col>
       </Row>
 
-      <Row style={{ marginTop: "10px" }}>
+      <Row style={{ marginTop: "50px" }}>
         <Col md="1" style={{ backgroundColor: "yellow" }}>
           <Biscuit />
         </Col>
