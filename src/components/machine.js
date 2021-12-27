@@ -13,9 +13,7 @@ const Machine = () => {
       setTimeout(() => {
         if (ovenDegrees < 240) setOvenDegrees(ovenDegrees + 1);
       }, 1000);
-    }
-
-    if (!heatingElement) {
+    } else {
       setTimeout(() => {
         if (ovenDegrees > 0) setOvenDegrees(ovenDegrees - 1);
       }, 1000);
@@ -23,9 +21,8 @@ const Machine = () => {
   }, [heatingElement, ovenDegrees]);
 
   useEffect(() => {
-    if (state === "On" && ovenDegrees < 220 && !heatingElement) {
-      setHeatingElement(true);
-    } else if (state === "On" && ovenDegrees > 239) setHeatingElement(false);
+    if (state === "On" && ovenDegrees < 220 && !heatingElement) setHeatingElement(true);
+    else if (state === "On" && ovenDegrees > 239) setHeatingElement(false);
   }, [state, ovenDegrees, heatingElement]);
 
   return (
