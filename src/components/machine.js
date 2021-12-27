@@ -1,9 +1,31 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import Oven from "./oven";
 import Switch from "./switch";
 
 const Machine = () => {
   const [state, setState] = useState("Off");
+  const [ovenDegrees, setOvenDegrees] = useState(0);
+  const [heatingElement, setHeatingElement] = useState(false);
+
+  useEffect(() => {
+    if (heatingElement) {
+      setTimeout(() => {
+        if (ovenDegrees < 240) setOvenDegrees(ovenDegrees + 1);
+      }, 1000);
+    } else {
+      setTimeout(() => {
+        if (ovenDegrees > 0) setOvenDegrees(ovenDegrees - 1);
+      }, 1000);
+    }
+  }, [heatingElement, ovenDegrees]);
+
+  useEffect(() => {
+    if (state === "On") {
+      if (ovenDegrees < 220 && !heatingElement) setHeatingElement(true);
+      else if (ovenDegrees > 239) setHeatingElement(false);
+    }
+  }, [state, ovenDegrees, heatingElement]);
 
   return (
     <Container>
@@ -20,7 +42,10 @@ const Machine = () => {
           md={{ span: 2, offset: 1 }}
           style={{ backgroundColor: "lightGray" }}
         >
-          Oven
+          <Oven
+            ovenDegrees={ovenDegrees}
+            heatingElement={heatingElement.toString()}
+          />
         </Col>
       </Row>
 
