@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import Conveyor from "./conveyor";
 import Oven from "./oven";
 import Switch from "./switch";
 
@@ -77,7 +78,7 @@ const Machine = () => {
 
       <Row style={{ marginTop: "10px" }}>
         <Col md="6" style={{ backgroundColor: "lightGray" }}>
-          Conveyor
+          <Conveyor state={state}/>
         </Col>
       </Row>
 
