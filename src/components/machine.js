@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import Biscuit from "./biscuit";
 import Conveyor from "./conveyor";
 import Oven from "./oven";
 import Switch from "./switch";
@@ -50,35 +51,17 @@ const Machine = () => {
         </Col>
       </Row>
 
-      <Row style={{ marginTop: "10px" }}>
+      <Row style={{ position: "relative" }}>
         <Col md="1" style={{ backgroundColor: "yellow" }}>
-          Biscuit
-        </Col>
-
-        <Col md="1" style={{ backgroundColor: "lightGray" }}>
-          Biscuit
-        </Col>
-
-        <Col md="1" style={{ backgroundColor: "yellow" }}>
-          Biscuit
-        </Col>
-
-        <Col md="1" style={{ backgroundColor: "lightGray" }}>
-          Biscuit
-        </Col>
-
-        <Col md="1" style={{ backgroundColor: "yellow" }}>
-          Biscuit
-        </Col>
-
-        <Col md="1" style={{ backgroundColor: "lightGray" }}>
-          Biscuit
+          <Biscuit />
         </Col>
       </Row>
 
+      <Row style={{ height: "75px" }}></Row>
+
       <Row style={{ marginTop: "10px" }}>
         <Col md="6" style={{ backgroundColor: "lightGray" }}>
-          <Conveyor state={state}/>
+          <Conveyor state={state} />
         </Col>
       </Row>
 
