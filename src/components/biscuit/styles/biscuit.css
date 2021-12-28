@@ -1,30 +1,27 @@
 .biscuit {
-  animation-duration: 5s;
-  animation-delay: 7s;
-  animation-name: conveyorBiscuit;
+  animation-duration: 5s, 0s;
+  animation-delay: 7s, 12s;
+  animation-name: conveyorBiscuit, disappearBiscuit;
   animation-fill-mode: forwards;
 }
 
 @keyframes conveyorBiscuit {
   from {
     margin-left: 0%;
-    /* margin-top: 5%; */
   }
 
   to {
-    margin-left: 27%;
-    /* margin-top: 5%; */
+    margin-left: 25%;
   }
 }
 
-@keyframes disappear {
+@keyframes disappearBiscuit {
   from {
-    margin-left: 90%;
-    margin-top: 5%;
+    margin-left: 25%;
   }
 
   to {
-    margin-left: 90%;
-    margin-top: 10%;
+    margin-left: 25%;
+    opacity: 0;
   }
 }
