@@ -1,0 +1,27 @@
+.biscuit {
+  animation-duration: 5s, 0s;
+  animation-delay: 7s, 12s;
+  animation-name: conveyorBiscuit, disappearBiscuit;
+  animation-fill-mode: forwards;
+}
+
+@keyframes conveyorBiscuit {
+  from {
+    margin-left: 0%;
+  }
+
+  to {
+    margin-left: 25%;
+  }
+}
+
+@keyframes disappearBiscuit {
+  from {
+    margin-left: 25%;
+  }
+
+  to {
+    margin-left: 25%;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,41 @@
+.bakedBiscuit {
+  animation-duration: 5s, 2s, 0s;
+  animation-delay: 12s, 17s, 19s;
+  animation-name: conveyorBakedBiscuit, dropBakedBiscuit, disappearBakedBiscuit;
+  animation-fill-mode: forwards;
+}
+
+@keyframes conveyorBakedBiscuit {
+  from {
+    margin-left: 0%;
+  }
+
+  to {
+    margin-left: 16%;
+  }
+}
+
+@keyframes dropBakedBiscuit {
+  from {
+    margin-left: 16%;
+    margin-top: 5%;
+  }
+
+  to {
+    margin-left: 16%;
+    margin-top: 11%;
+  }
+}
+
+@keyframes disappearBakedBiscuit {
+  from {
+    margin-left: 16%;
+    margin-top: 5%;
+  }
+
+  to {
+    margin-left: 16%;
+    margin-top: 5%;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,41 @@
+.dough {
+  animation-duration: 2s, 4s, 0s;
+  animation-delay: 0s, 2s, 6s;
+  animation-name: drop, conveyorDough, disappear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes drop {
+  from {
+    margin-top: 0%;
+  }
+
+  to {
+    margin-top: 5%;
+  }
+}
+
+@keyframes conveyorDough {
+  from {
+    margin-left: 0%;
+    margin-top: 5%;
+  }
+
+  to {
+    margin-left: 9%;
+    margin-top: 5%;
+  }
+}
+
+@keyframes disappear {
+  from {
+    margin-left: 9%;
+    margin-top: 5%;
+  }
+
+  to {
+    margin-left: 9%;
+    margin-top: 5%;
+    opacity: 0;
+  }
+}
