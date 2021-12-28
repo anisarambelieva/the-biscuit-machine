@@ -51,17 +51,17 @@ const Machine = () => {
         </Col>
       </Row>
 
-      <Row style={{ position: 'relative' }}>
+      <Row style={{ position: "relative" }}>
         <Col md="1" style={{ backgroundColor: "yellow" }}>
           <Biscuit />
         </Col>
       </Row>
 
-      <Row style={{height: '75px'}}></Row>
+      <Row style={{ height: "75px" }}></Row>
 
       <Row style={{ marginTop: "10px" }}>
         <Col md="6" style={{ backgroundColor: "lightGray" }}>
-          <Conveyor state={state}/>
+          <Conveyor state={state} />
         </Col>
       </Row>
 

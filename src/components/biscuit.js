@@ -1,5 +1,9 @@
-import "./styles/biscuit.css"
+import "./styles/biscuit.css";
 
-const Biscuit = () => <div className="biscuit" style={{margin: 0, position: 'absolute'}}>Biscuit</div>;
+const Biscuit = () => (
+  <div className="biscuit" style={{ margin: 0, position: "absolute" }}>
+    Biscuit
+  </div>
+);
 
 export default Biscuit;
