@@ -1,5 +1,5 @@
 .dough {
-  animation-duration: 2s, 4s, 1s;
+  animation-duration: 2s, 4s, 0s;
   animation-delay: 0s, 2s, 6s;
   animation-name: drop, conveyorDough, disappear;
   animation-fill-mode: forwards;
