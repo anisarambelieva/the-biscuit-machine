@@ -1,0 +1,40 @@
+.biscuit {
+  animation-duration: 2s, 10s, 1s;
+  animation-delay: 0s, 2s, 12s;
+  animation-name: drop, conveyor, disappear;
+}
+
+@keyframes conveyor {
+  from {
+    margin-left: 0%;
+    margin-top: 5%;
+  }
+
+  to {
+    margin-left: 50%;
+    margin-top: 5%;
+  }
+}
+
+@keyframes drop {
+  from {
+    margin-top: 0%;
+  }
+
+  to {
+    margin-top: 5%;
+  }
+}
+
+@keyframes disappear {
+  from {
+    margin-left: 50%;
+    margin-top: 5%;
+  }
+
+  to {
+    margin-left: 50%;
+    margin-top: 10%;
+    /* opacity: 0; */
+  }
+}
