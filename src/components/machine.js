@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Biscuit from "./biscuit";
+import Biscuit from "./biscuit/biscuit";
 import Conveyor from "./conveyor";
 import Oven from "./oven";
 import Switch from "./switch";
