@@ -57,11 +57,13 @@ const Machine = () => {
         <Col md="1" style={{ backgroundColor: "yellow" }}>
           <Dough />
         </Col>
-        <Col md="1" >
-          <Biscuit/>
+
+        <Col md="1">
+          <Biscuit />
         </Col>
-        <Col md={{ span: 1, offset: 2 }} >
-          <BakedBiscuit/>
+
+        <Col md={{ span: 1, offset: 2 }}>
+          <BakedBiscuit />
         </Col>
       </Row>
 
@@ -86,6 +88,7 @@ const Machine = () => {
         <Col md="1" style={{ backgroundColor: "lightGray" }}>
           Motor: {state === "On" ? "working" : "not working"}
         </Col>
+        
         <Col
           md={{ span: 2, offset: 2 }}
           style={{ backgroundColor: "lightGray" }}
