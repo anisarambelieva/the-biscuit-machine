@@ -1,6 +1,6 @@
 .bakedBiscuit {
   animation-duration: 5s, 2s, 0s;
-  animation-delay: 12s, 17s, 19s;
+  animation-delay: 0s, 5s, 7s;
   animation-name: conveyorBakedBiscuit, dropBakedBiscuit, disappearBakedBiscuit;
   animation-fill-mode: forwards;
 }
