@@ -12,35 +12,19 @@ const BiscuitLifecycle = () => {
   const [second, setSecond] = useState(false);
 
   setTimeout(() => {
-    setStamped(true);
-  }, 6500);
-
-  setTimeout(() => {
-    setBaked(true);
-  }, 11500);
-
-  setTimeout(() => {
     setSecond(true);
   }, 4500);
-
-  setTimeout(() => {
-    setSecondStamped(true);
-  }, 11000);
-
-  setTimeout(() => {
-    setSecondBaked(true);
-  }, 16000);
-
+  
   return (
     <>
       <Col md="1">
-        <Dough />
-        {second && <Dough />}
+        <Dough onAnimationEnd={setStamped}/>
+        {second && <Dough onAnimationEnd={setSecondStamped}/>}
       </Col>
 
       <Col md="1">
-        {stamped && <Biscuit />}
-        {secondStamped && <Biscuit />}
+        {stamped && <Biscuit onAnimationEnd={setBaked}/>}
+        {secondStamped && <Biscuit onAnimationEnd={setSecondBaked}/>}
       </Col>
 
       <Col md={{ span: 1, offset: 2 }}>
