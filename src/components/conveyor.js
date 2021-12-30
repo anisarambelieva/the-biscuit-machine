@@ -1,3 +1,3 @@
-const Conveyor = ({ state }) => <p>Coveyor working: {state === "On" ? "true" : "false" }</p>;
+const Conveyor = ({ conveyorWorking }) => <p>Coveyor working: {conveyorWorking.toString()}</p>;
 
 export default Conveyor;
