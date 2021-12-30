@@ -34,8 +34,8 @@ const BiscuitLifecycle = () => {
   return (
     <>
       <Col md="1">
-        <Dough />
-        {second && <Dough />}
+        <Dough onAnimationEnd={setStamped}/>
+        {second && <Dough onAnimationEnd={setSecondStamped}/>}
       </Col>
 
       <Col md="1">
