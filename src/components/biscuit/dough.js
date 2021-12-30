@@ -2,7 +2,6 @@ import "./styles/dough.css";
 
 let animationsCount = 0;
 const Dough = ({ onAnimationEnd }) => {
-
   const handleAnimationEnd = () => {
     animationsCount++;
 
@@ -12,7 +11,11 @@ const Dough = ({ onAnimationEnd }) => {
   };
 
   return (
-    <div onAnimationEnd={handleAnimationEnd} className="dough" style={{ margin: 0, position: "absolute" }}>
+    <div
+      onAnimationEnd={handleAnimationEnd}
+      className="dough"
+      style={{ margin: 0, position: "absolute" }}
+    >
       Dough
     </div>
   );
