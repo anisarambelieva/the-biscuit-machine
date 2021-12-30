@@ -9,6 +9,7 @@ const Machine = () => {
   const [state, setState] = useState("Off");
   const [ovenDegrees, setOvenDegrees] = useState(0);
   const [heatingElement, setHeatingElement] = useState(false);
+  const [conveyorWorking, setConveyorWorking] = useState(false);
 
   useEffect(() => {
     if (heatingElement) {
@@ -28,6 +29,12 @@ const Machine = () => {
       else if (ovenDegrees > 239) setHeatingElement(false);
     }
   }, [state, ovenDegrees, heatingElement]);
+
+  useEffect(() => {
+    if (ovenDegrees >= 220 && state === "On") {
+      setConveyorWorking(true);
+    }
+  }, [ovenDegrees, state])
 
   return (
     <Container>
