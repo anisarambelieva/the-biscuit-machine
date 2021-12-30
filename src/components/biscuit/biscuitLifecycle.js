@@ -12,17 +12,9 @@ const BiscuitLifecycle = () => {
   const [second, setSecond] = useState(false);
 
   setTimeout(() => {
-    setBaked(true);
-  }, 11500);
-
-  setTimeout(() => {
     setSecond(true);
   }, 4500);
-
-  setTimeout(() => {
-    setSecondBaked(true);
-  }, 16000);
-
+  
   return (
     <>
       <Col md="1">
