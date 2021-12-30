@@ -31,8 +31,8 @@ const BiscuitLifecycle = () => {
       </Col>
 
       <Col md="1">
-        {stamped && <Biscuit />}
-        {secondStamped && <Biscuit />}
+        {stamped && <Biscuit onAnimationEnd={setBaked}/>}
+        {secondStamped && <Biscuit onAnimationEnd={setSecondBaked}/>}
       </Col>
 
       <Col md={{ span: 1, offset: 2 }}>
