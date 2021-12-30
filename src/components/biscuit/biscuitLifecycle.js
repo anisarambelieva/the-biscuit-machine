@@ -12,20 +12,12 @@ const BiscuitLifecycle = () => {
   const [second, setSecond] = useState(false);
 
   setTimeout(() => {
-    setStamped(true);
-  }, 6500);
-
-  setTimeout(() => {
     setBaked(true);
   }, 11500);
 
   setTimeout(() => {
     setSecond(true);
   }, 4500);
-
-  setTimeout(() => {
-    setSecondStamped(true);
-  }, 11000);
 
   setTimeout(() => {
     setSecondBaked(true);
