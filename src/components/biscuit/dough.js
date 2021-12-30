@@ -5,9 +5,8 @@ const Dough = ({ onAnimationEnd }) => {
 
   const handleAnimationEnd = () => {
     animationsCount++;
-    console.log(animationsCount)
+
     if (animationsCount % 3 === 0) {
-      
       onAnimationEnd(true);
     }
   };
