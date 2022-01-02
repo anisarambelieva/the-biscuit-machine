@@ -1,7 +1,7 @@
 import "./styles/biscuit.css";
 
 let animationsCount = 0;
-const Biscuit = ({ onAnimationEnd }) => {
+const Biscuit = ({ onAnimationEnd, state }) => {
   const handleAnimationEnd = () => {
     animationsCount++;
 
@@ -14,7 +14,12 @@ const Biscuit = ({ onAnimationEnd }) => {
     <div
       onAnimationEnd={handleAnimationEnd}
       className="biscuit"
-      style={{ margin: 0, marginTop: "65px", position: "absolute" }}
+      style={{
+        margin: 0,
+        marginTop: "65px",
+        position: "absolute",
+        WebkitAnimationPlayState: state,
+      }}
     >
       Biscuit
     </div>
