@@ -4,6 +4,7 @@ import Conveyor from "./conveyor";
 import Oven from "./oven";
 import Switch from "./switch";
 import BiscuitLifecycle from "./biscuit/biscuitLifecycle";
+import Stamper from "./stamper/stamper";
 
 const Machine = () => {
   const [state, setState] = useState("Off");
@@ -43,8 +44,8 @@ const Machine = () => {
           Extruder
         </Col>
 
-        <Col md="1" style={{ backgroundColor: "yellow" }}>
-          Stamper
+        <Col md="1">
+          <Stamper />
         </Col>
 
         <Col
