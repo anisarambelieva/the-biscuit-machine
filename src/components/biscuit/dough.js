@@ -1,7 +1,7 @@
 import "./styles/dough.css";
 
 let animationsCount = 0;
-const Dough = ({ onAnimationEnd }) => {
+const Dough = ({ onAnimationEnd, state }) => {
   const handleAnimationEnd = () => {
     animationsCount++;
 
@@ -14,7 +14,7 @@ const Dough = ({ onAnimationEnd }) => {
     <div
       onAnimationEnd={handleAnimationEnd}
       className="dough"
-      style={{ margin: 0, position: "absolute" }}
+      style={{ margin: 0, position: "absolute", WebkitAnimationPlayState: state }}
     >
       Dough
     </div>
