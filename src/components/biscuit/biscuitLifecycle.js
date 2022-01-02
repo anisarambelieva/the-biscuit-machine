@@ -18,8 +18,16 @@ const BiscuitLifecycle = ({ state }) => {
   return (
     <>
       <Col md="1">
-        <Dough onAnimationEnd={setStamped} state={state} />
-        {second && <Dough onAnimationEnd={setSecondStamped} state={state} />}
+        <Dough
+          onAnimationEnd={setStamped}
+          state={state === "Paused" ? "paused" : "running"}
+        />
+        {second && (
+          <Dough
+            onAnimationEnd={setSecondStamped}
+            state={state === "Paused" ? "paused" : "running"}
+          />
+        )}
       </Col>
 
       <Col md="1">
