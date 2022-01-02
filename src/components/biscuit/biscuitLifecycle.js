@@ -46,8 +46,8 @@ const BiscuitLifecycle = ({ state }) => {
       </Col>
 
       <Col md={{ span: 1, offset: 2 }}>
-        {baked && <BakedBiscuit />}
-        {secondBaked && <BakedBiscuit />}
+        {baked && <BakedBiscuit state={state === "Paused" ? "paused" : "running"} />}
+        {secondBaked && <BakedBiscuit state={state === "Paused" ? "paused" : "running"} />}
       </Col>
     </>
   );
