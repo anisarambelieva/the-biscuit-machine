@@ -44,7 +44,7 @@ const Machine = () => {
           Extruder
         </Col>
 
-        <Col md="1">
+        <Col md="1" style={{ position: "relative" }}>
           <Stamper />
         </Col>
 
