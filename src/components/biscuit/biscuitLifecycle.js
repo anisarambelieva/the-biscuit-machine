@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Col } from "react-bootstrap";
 import BakedBiscuit from "./bakedBiscuit";
 import Dough from "./dough";
@@ -10,6 +10,12 @@ const BiscuitLifecycle = ({ state }) => {
   const [baked, setBaked] = useState(false);
   const [secondBaked, setSecondBaked] = useState(false);
   const [second, setSecond] = useState(false);
+  const [animationState, setAnimationState] = useState("running");
+
+  useEffect(() => {
+    if (state === "Paused") setAnimationState("paused");
+    else setAnimationState("running");
+  }, [animationState, state]);
 
   setTimeout(() => {
     setSecond(true);
@@ -18,36 +24,27 @@ const BiscuitLifecycle = ({ state }) => {
   return (
     <>
       <Col md="1">
-        <Dough
-          onAnimationEnd={setStamped}
-          state={state === "Paused" ? "paused" : "running"}
-        />
+        <Dough onAnimationEnd={setStamped} state={animationState} />
         {second && (
-          <Dough
-            onAnimationEnd={setSecondStamped}
-            state={state === "Paused" ? "paused" : "running"}
-          />
+          <Dough onAnimationEnd={setSecondStamped} state={animationState} />
         )}
       </Col>
 
       <Col md="1">
         {stamped && (
-          <Biscuit
-            onAnimationEnd={setBaked}
-            state={state === "Paused" ? "paused" : "running"}
-          />
+          <Biscuit onAnimationEnd={setBaked} state={animationState} />
         )}
         {secondStamped && (
           <Biscuit
             onAnimationEnd={setSecondBaked}
-            state={state === "Paused" ? "paused" : "running"}
+            state={animationState}
           />
         )}
       </Col>
 
       <Col md={{ span: 1, offset: 2 }}>
-        {baked && <BakedBiscuit state={state === "Paused" ? "paused" : "running"} />}
-        {secondBaked && <BakedBiscuit state={state === "Paused" ? "paused" : "running"} />}
+        {baked && <BakedBiscuit state={animationState} /> }
+        {secondBaked && <BakedBiscuit state={animationState} /> }
       </Col>
     </>
   );
