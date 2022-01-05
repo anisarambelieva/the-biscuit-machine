@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Col } from "react-bootstrap";
 import BakedBiscuit from "./bakedBiscuit";
 import Dough from "./dough";
@@ -10,12 +10,6 @@ const BiscuitLifecycle = ({ state, onStamp }) => {
   const [baked, setBaked] = useState(false);
   const [secondBaked, setSecondBaked] = useState(false);
   const [second, setSecond] = useState(false);
-  const [animationState, setAnimationState] = useState("running");
-
-  useEffect(() => {
-    if (state === "Paused") setAnimationState("paused");
-    else setAnimationState("running");
-  }, [animationState, state]);
 
   setTimeout(() => {
     setSecond(true);
