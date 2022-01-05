@@ -39,6 +39,11 @@ const Machine = () => {
     }
   }, [ovenDegrees, state])
 
+  useEffect(() => {
+    if (state === "Paused") setAnimationState("paused");
+    else setAnimationState("running");
+  }, [animationState, state]);
+
   return (
     <Container>
       <Row style={{ marginTop: "10px" }}>
