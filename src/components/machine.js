@@ -7,6 +7,7 @@ import BiscuitLifecycle from "./biscuit/biscuitLifecycle";
 import Stamper from "./stamper/stamper";
 import Extruder from "./extruder";
 import Motor from "./motor";
+import BiscuitContainer from "./container";
 
 const Machine = () => {
   const [state, setState] = useState("Off");
@@ -78,11 +79,8 @@ const Machine = () => {
       </Row>
 
       <Row style={{ marginTop: "20px" }}>
-        <Col
-          md={{ span: 1, offset: 6 }}
-          style={{ backgroundColor: "lightGray" }}
-        >
-          Container
+        <Col md={{ span: 2, offset: 5 }}>
+          <BiscuitContainer/>
         </Col>
       </Row>
 
