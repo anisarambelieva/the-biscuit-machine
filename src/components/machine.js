@@ -56,10 +56,7 @@ const Machine = () => {
           <Stamper animationState={animationState} stamp={stamping} />
         </Col>
 
-        <Col
-          md={{ span: 2, offset: 1 }}
-          style={{ backgroundColor: "lightGray" }}
-        >
+        <Col md={{ span: 2, offset: 1 }}>
           <Oven
             ovenDegrees={ovenDegrees}
             heatingElement={heatingElement.toString()}
