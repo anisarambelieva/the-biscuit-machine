@@ -1,9 +1,11 @@
+import { useState } from "react";
 import "./styles/dough.css";
 
-let animationsCount = 0;
 const Dough = ({ onAnimationEnd, state }) => {
+  const [animationsCount, setAnimationsCount] = useState(1);
+
   const handleAnimationEnd = () => {
-    animationsCount++;
+    setAnimationsCount(animationsCount + 1);
 
     if (animationsCount % 3 === 0) {
       onAnimationEnd(true);
