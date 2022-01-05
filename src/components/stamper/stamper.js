@@ -1,14 +1,6 @@
-import { useEffect, useState } from "react";
 import "./stamper.css";
 
-const Stamper = ({ stamp, state }) => {
-  const [animationState, setAnimationState] = useState("running");
-
-  useEffect(() => {
-    if (state === "Paused") setAnimationState("paused");
-    else setAnimationState("running");
-  }, [animationState, state]);
-
+const Stamper = ({ stamp, animationState }) => {
   return (
     <div
       className={stamp ? "stamper" : ""}
