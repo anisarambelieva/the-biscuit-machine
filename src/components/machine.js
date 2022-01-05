@@ -89,11 +89,8 @@ const Machine = () => {
         <Col md="1" style={{ backgroundColor: "lightGray" }}>
           Motor: {state === "On" ? "working" : "not working"}
         </Col>
-        
-        <Col
-          md={{ span: 2, offset: 2 }}
-          style={{ backgroundColor: "lightGray" }}
-        >
+
+        <Col md={{ span: 2, offset: 2 }}>
           <Switch onChange={setState} />
         </Col>
       </Row>
