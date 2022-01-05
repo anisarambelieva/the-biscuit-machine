@@ -26,6 +26,7 @@ const Dough = ({ onAnimationEnd, state, onStamp }) => {
         margin: 0,
         position: "absolute",
         WebkitAnimationPlayState: state,
+        paddingLeft: "20px"
       }}
     >
       Dough
