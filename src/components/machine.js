@@ -11,6 +11,7 @@ const Machine = () => {
   const [ovenDegrees, setOvenDegrees] = useState(0);
   const [heatingElement, setHeatingElement] = useState(false);
   const [conveyorWorking, setConveyorWorking] = useState(false);
+  const [stamping, setStamping] = useState(false);
 
   useEffect(() => {
     if (heatingElement) {
@@ -45,7 +46,7 @@ const Machine = () => {
         </Col>
 
         <Col md="1" style={{ position: "relative" }}>
-          <Stamper />
+          <Stamper stamp={stamping} />
         </Col>
 
         <Col
@@ -60,7 +61,7 @@ const Machine = () => {
       </Row>
 
       <Row style={{ position: "relative" }}>
-        {conveyorWorking && <BiscuitLifecycle state={state} />}
+        {conveyorWorking && <BiscuitLifecycle state={state} onStamp={setStamping} />}
       </Row>
 
       <Row style={{ height: "75px" }}></Row>
