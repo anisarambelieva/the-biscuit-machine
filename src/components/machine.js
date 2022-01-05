@@ -74,7 +74,7 @@ const Machine = () => {
       <Row style={{ height: "75px" }}></Row>
 
       <Row style={{ marginTop: "10px" }}>
-        <Col md="6" style={{ backgroundColor: "lightGray" }}>
+        <Col md="6" >
           <Conveyor conveyorWorking={conveyorWorking} />
         </Col>
       </Row>
