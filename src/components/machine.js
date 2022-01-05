@@ -12,6 +12,7 @@ const Machine = () => {
   const [heatingElement, setHeatingElement] = useState(false);
   const [conveyorWorking, setConveyorWorking] = useState(false);
   const [stamping, setStamping] = useState(false);
+  const [animationState, setAnimationState] = useState("running");
 
   useEffect(() => {
     if (heatingElement) {
@@ -38,6 +39,11 @@ const Machine = () => {
     }
   }, [ovenDegrees, state])
 
+  useEffect(() => {
+    if (state === "Paused") setAnimationState("paused");
+    else setAnimationState("running");
+  }, [animationState, state]);
+
   return (
     <Container>
       <Row style={{ marginTop: "10px" }}>
@@ -46,7 +52,7 @@ const Machine = () => {
         </Col>
 
         <Col md="1" style={{ position: "relative" }}>
-          <Stamper state={state} stamp={stamping} />
+          <Stamper animationState={animationState} stamp={stamping} />
         </Col>
 
         <Col
@@ -61,7 +67,7 @@ const Machine = () => {
       </Row>
 
       <Row style={{ position: "relative" }}>
-        {conveyorWorking && <BiscuitLifecycle state={state} onStamp={setStamping} />}
+        {conveyorWorking && <BiscuitLifecycle animationState={animationState} onStamp={setStamping} />}
       </Row>
 
       <Row style={{ height: "75px" }}></Row>
