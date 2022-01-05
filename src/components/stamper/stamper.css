@@ -1,6 +1,6 @@
 .stamper {
-  animation-duration: 2s, 2s;
-  animation-delay: 0s, 2s;
+  animation-duration: 1s, 1s;
+  animation-delay: 0s, 1s;
   animation-name: down, up;
   animation-fill-mode: forwards;
 }
