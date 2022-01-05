@@ -16,7 +16,11 @@ const Dough = ({ onAnimationEnd, state }) => {
     <div
       onAnimationEnd={handleAnimationEnd}
       className="dough"
-      style={{ margin: 0, position: "absolute", WebkitAnimationPlayState: state }}
+      style={{
+        margin: 0,
+        position: "absolute",
+        WebkitAnimationPlayState: state,
+      }}
     >
       Dough
     </div>
