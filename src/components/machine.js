@@ -46,7 +46,7 @@ const Machine = () => {
         </Col>
 
         <Col md="1" style={{ position: "relative" }}>
-          <Stamper stamp={stamping} />
+          <Stamper state={state} stamp={stamping} />
         </Col>
 
         <Col
