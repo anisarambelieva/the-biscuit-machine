@@ -4,7 +4,7 @@ import BakedBiscuit from "./bakedBiscuit";
 import Dough from "./dough";
 import Biscuit from "./rawBiscuit";
 
-const BiscuitLifecycle = ({ state }) => {
+const BiscuitLifecycle = ({ state, onStamp }) => {
   const [stamped, setStamped] = useState(false);
   const [secondStamped, setSecondStamped] = useState(false);
   const [baked, setBaked] = useState(false);
@@ -24,9 +24,9 @@ const BiscuitLifecycle = ({ state }) => {
   return (
     <>
       <Col md="1">
-        <Dough onAnimationEnd={setStamped} state={animationState} />
+        <Dough onAnimationEnd={setStamped} onStamp={onStamp} state={animationState} />
         {second && (
-          <Dough onAnimationEnd={setSecondStamped} state={animationState} />
+          <Dough onAnimationEnd={setSecondStamped} onStamp={onStamp} state={animationState} />
         )}
       </Col>
 

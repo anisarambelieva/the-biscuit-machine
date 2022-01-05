@@ -1,12 +1,20 @@
+import { useState } from "react";
 import "./styles/dough.css";
 
-let animationsCount = 0;
-const Dough = ({ onAnimationEnd, state }) => {
-  const handleAnimationEnd = () => {
-    animationsCount++;
+const Dough = ({ onAnimationEnd, state, onStamp }) => {
+  const [animationsCount, setAnimationsCount] = useState(1);
 
-    if (animationsCount % 3 === 0) {
+  const handleAnimationEnd = () => {
+    setAnimationsCount(animationsCount + 1);
+
+    if (animationsCount === 4) {
       onAnimationEnd(true);
+      
+      setTimeout(() => {
+        onStamp(false);
+      }, 1000);
+    } else if (animationsCount === 2) {
+      onStamp(true);
     }
   };
 
@@ -14,7 +22,11 @@ const Dough = ({ onAnimationEnd, state }) => {
     <div
       onAnimationEnd={handleAnimationEnd}
       className="dough"
-      style={{ margin: 0, position: "absolute", WebkitAnimationPlayState: state }}
+      style={{
+        margin: 0,
+        position: "absolute",
+        WebkitAnimationPlayState: state,
+      }}
     >
       Dough
     </div>
