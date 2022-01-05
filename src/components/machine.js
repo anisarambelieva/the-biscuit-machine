@@ -5,6 +5,7 @@ import Oven from "./oven";
 import Switch from "./switch";
 import BiscuitLifecycle from "./biscuit/biscuitLifecycle";
 import Stamper from "./stamper/stamper";
+import Extruder from "./extruder";
 
 const Machine = () => {
   const [state, setState] = useState("Off");
@@ -47,8 +48,8 @@ const Machine = () => {
   return (
     <Container>
       <Row style={{ marginTop: "10px" }}>
-        <Col md="1" style={{ backgroundColor: "lightGray" }}>
-          Extruder
+        <Col md="1">
+          <Extruder />
         </Col>
 
         <Col md="1" style={{ position: "relative" }}>
