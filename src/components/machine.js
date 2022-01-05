@@ -6,6 +6,7 @@ import Switch from "./switch";
 import BiscuitLifecycle from "./biscuit/biscuitLifecycle";
 import Stamper from "./stamper/stamper";
 import Extruder from "./extruder";
+import Motor from "./motor";
 
 const Machine = () => {
   const [state, setState] = useState("Off");
@@ -86,8 +87,8 @@ const Machine = () => {
       </Row>
 
       <Row>
-        <Col md="1" style={{ backgroundColor: "lightGray" }}>
-          Motor: {state === "On" ? "working" : "not working"}
+        <Col md="1" >
+          <Motor state={state}/>
         </Col>
 
         <Col md={{ span: 2, offset: 2 }}>
