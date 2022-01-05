@@ -7,11 +7,11 @@ const SwitchButton = styled(Button)`
 
 const Switch = ({ onChange }) => {
   return (
-    <div style={{padding: '5px'}}>
+    <div style={{padding: '5px', backgroundColor: "lightgray"}}>
       <p>Switch</p>
-      <SwitchButton onClick={() => onChange('On')} style={{marginRight: '5px'}}>On</SwitchButton>
-      <SwitchButton onClick={() => onChange('Paused')} style={{ marginRight: '5px'}}>Paused</SwitchButton>
-      <SwitchButton onClick={() => onChange('Off')}>Off</SwitchButton>
+      <SwitchButton onClick={() => onChange('On')} style={{marginRight: '5px', backgroundColor: "gray", border: "gray"}}>On</SwitchButton>
+      <SwitchButton onClick={() => onChange('Paused')} style={{ marginRight: '5px', backgroundColor: "gray", border: "gray"}}>Paused</SwitchButton>
+      <SwitchButton onClick={() => onChange('Off')} style={{ backgroundColor: "gray", border: "gray"}}>Off</SwitchButton>
     </div>
   );
 };

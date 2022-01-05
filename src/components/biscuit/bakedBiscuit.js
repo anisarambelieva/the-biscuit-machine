@@ -8,6 +8,7 @@ const BakedBiscuit = ({ state }) => (
       marginTop: "65px",
       position: "absolute",
       WebkitAnimationPlayState: state,
+      paddingLeft: "25px"
     }}
   >
     Baked

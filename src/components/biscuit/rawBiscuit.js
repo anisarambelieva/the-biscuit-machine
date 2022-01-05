@@ -19,6 +19,7 @@ const Biscuit = ({ onAnimationEnd, state }) => {
         marginTop: "65px",
         position: "absolute",
         WebkitAnimationPlayState: state,
+        paddingLeft: "25px"
       }}
     >
       Biscuit

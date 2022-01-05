@@ -56,10 +56,7 @@ const Machine = () => {
           <Stamper animationState={animationState} stamp={stamping} />
         </Col>
 
-        <Col
-          md={{ span: 2, offset: 1 }}
-          style={{ backgroundColor: "lightGray" }}
-        >
+        <Col md={{ span: 2, offset: 1 }}>
           <Oven
             ovenDegrees={ovenDegrees}
             heatingElement={heatingElement.toString()}
@@ -74,7 +71,7 @@ const Machine = () => {
       <Row style={{ height: "75px" }}></Row>
 
       <Row style={{ marginTop: "10px" }}>
-        <Col md="6" style={{ backgroundColor: "lightGray" }}>
+        <Col md="6" >
           <Conveyor conveyorWorking={conveyorWorking} />
         </Col>
       </Row>
@@ -92,11 +89,8 @@ const Machine = () => {
         <Col md="1" style={{ backgroundColor: "lightGray" }}>
           Motor: {state === "On" ? "working" : "not working"}
         </Col>
-        
-        <Col
-          md={{ span: 2, offset: 2 }}
-          style={{ backgroundColor: "lightGray" }}
-        >
+
+        <Col md={{ span: 2, offset: 2 }}>
           <Switch onChange={setState} />
         </Col>
       </Row>
