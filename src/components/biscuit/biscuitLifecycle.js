@@ -4,7 +4,7 @@ import BakedBiscuit from "./bakedBiscuit";
 import Dough from "./dough";
 import Biscuit from "./rawBiscuit";
 
-const BiscuitLifecycle = ({ state, onStamp }) => {
+const BiscuitLifecycle = ({ animationState, onStamp }) => {
   const [stamped, setStamped] = useState(false);
   const [secondStamped, setSecondStamped] = useState(false);
   const [baked, setBaked] = useState(false);
