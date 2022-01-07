@@ -4,14 +4,14 @@ import BakedBiscuit from "./bakedBiscuit";
 import Dough from "./dough";
 import Biscuit from "./rawBiscuit";
 
-const BiscuitLifecycle = ({ animationState, onStamp }) => {
+const BiscuitLifecycle = ({ animationState, onStamp, machineState }) => {
   const [stamped, setStamped] = useState(false);
   const [baked, setBaked] = useState(false);
 
   return (
     <>
       <Col md="1">
-        <Dough onAnimationEnd={setStamped} onStamp={onStamp} state={animationState} />
+        <Dough onAnimationEnd={setStamped} onStamp={onStamp} state={animationState} machineState={machineState} />
       </Col>
 
       <Col md="1">
