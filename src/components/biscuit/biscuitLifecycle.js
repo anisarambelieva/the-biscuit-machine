@@ -6,31 +6,17 @@ import Biscuit from "./rawBiscuit";
 
 const BiscuitLifecycle = ({ animationState, onStamp }) => {
   const [stamped, setStamped] = useState(false);
-  const [secondStamped, setSecondStamped] = useState(false);
   const [baked, setBaked] = useState(false);
-  const [secondBaked, setSecondBaked] = useState(false);
-  const [second, setSecond] = useState(false);
 
-  setTimeout(() => {
-    setSecond(true);
-  }, 4500);
-  
   return (
     <>
       <Col md="1">
         <Dough onAnimationEnd={setStamped} onStamp={onStamp} state={animationState} />
-        {second && (
-          <Dough onAnimationEnd={setSecondStamped} onStamp={onStamp} state={animationState} />
-        )}
       </Col>
 
       <Col md="1">
         {stamped && (
-          <Biscuit onAnimationEnd={setBaked} state={animationState} />
-        )}
-        {secondStamped && (
           <Biscuit
-            onAnimationEnd={setSecondBaked}
             state={animationState}
           />
         )}
@@ -38,7 +24,6 @@ const BiscuitLifecycle = ({ animationState, onStamp }) => {
 
       <Col md={{ span: 1, offset: 2 }}>
         {baked && <BakedBiscuit state={animationState} /> }
-        {secondBaked && <BakedBiscuit state={animationState} /> }
       </Col>
     </>
   );
