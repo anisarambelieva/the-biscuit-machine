@@ -1,11 +1,11 @@
 .biscuit {
   animation-duration: 5s, 0s;
   animation-delay: 0s, 5s;
-  animation-name: conveyorBiscuit, disappearBiscuit;
+  animation-name: conveyor, disappear;
   animation-fill-mode: forwards;
 }
 
-@keyframes conveyorBiscuit {
+@keyframes conveyor {
   from {
     margin-left: 0%;
   }
@@ -15,7 +15,7 @@
   }
 }
 
-@keyframes disappearBiscuit {
+@keyframes disappear {
   from {
     margin-left: 25%;
   }
