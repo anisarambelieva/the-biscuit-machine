@@ -1,12 +1,13 @@
 import "./styles/biscuit.css";
 
 let animationsCount = 0;
-const Biscuit = ({ onAnimationEnd, state }) => {
+const Biscuit = ({ onAnimationEnd, state, onStamp }) => {
   const handleAnimationEnd = () => {
     animationsCount++;
 
     if (animationsCount % 2 === 0) {
       onAnimationEnd(true);
+      onStamp(false);
     }
   };
 
