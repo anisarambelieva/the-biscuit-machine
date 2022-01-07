@@ -14,9 +14,12 @@ const Dough = ({ onAnimationEnd, state, onStamp }) => {
       
       setTimeout(() => {
         onStamp(false);
+      }, 1000);
+
+      setTimeout(() => {
         setClassName("dough");
         setAnimationsCount(1)
-      }, 1000);
+      }, 100)
     } else if (animationsCount === 2) {
       onStamp(true);
     }
