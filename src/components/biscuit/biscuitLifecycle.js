@@ -17,6 +17,7 @@ const BiscuitLifecycle = ({ animationState, onStamp }) => {
       <Col md="1">
         {stamped && (
           <Biscuit
+            onAnimationEnd={setBaked}
             state={animationState}
             onStamp={setStamped}
           />
@@ -24,7 +25,7 @@ const BiscuitLifecycle = ({ animationState, onStamp }) => {
       </Col>
 
       <Col md={{ span: 1, offset: 2 }}>
-        {baked && <BakedBiscuit state={animationState} /> }
+        {baked && <BakedBiscuit state={animationState} onBaked={setBaked} />}
       </Col>
     </>
   );
