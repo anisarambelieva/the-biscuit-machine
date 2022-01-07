@@ -11,6 +11,7 @@ const Stamper = ({ stamp, animationState }) => {
         height: "50px",
         width: "100px",
         WebkitAnimationPlayState: animationState,
+        zIndex: "1"
       }}
     >
       Stamper
