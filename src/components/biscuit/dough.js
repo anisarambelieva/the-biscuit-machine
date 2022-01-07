@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./styles/dough.css";
 
-const Dough = ({ onAnimationEnd, state, onStamp }) => {
+const Dough = ({ onAnimationEnd, state, onStamp, machineState }) => {
   const [animationsCount, setAnimationsCount] = useState(1);
   const [className, setClassName] = useState("dough");
 
@@ -9,17 +9,20 @@ const Dough = ({ onAnimationEnd, state, onStamp }) => {
     setAnimationsCount(animationsCount + 1);
 
     if (animationsCount === 4) {
+      if (machineState !== "Off") {
+        setClassName("");
+
+        setTimeout(() => {
+          setClassName("dough");
+          setAnimationsCount(1)
+        }, 100)
+      }
+      
       onAnimationEnd(true);
-      setClassName("");
       
       setTimeout(() => {
         onStamp(false);
       }, 1000);
-
-      setTimeout(() => {
-        setClassName("dough");
-        setAnimationsCount(1)
-      }, 100)
     } else if (animationsCount === 2) {
       onStamp(true);
     }
