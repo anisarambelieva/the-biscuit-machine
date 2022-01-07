@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Conveyor from "./conveyor";
-import Oven from "./oven";
+import Oven from "./oven/oven";
 import Switch from "./switch";
 import BiscuitLifecycle from "./biscuit/biscuitLifecycle";
 import Stamper from "./stamper/stamper";
