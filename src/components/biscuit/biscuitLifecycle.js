@@ -18,6 +18,7 @@ const BiscuitLifecycle = ({ animationState, onStamp }) => {
         {stamped && (
           <Biscuit
             state={animationState}
+            onStamp={setStamped}
           />
         )}
       </Col>
