@@ -60,8 +60,6 @@ const Machine = () => {
 
         <Col md={{ span: 2, offset: 1 }}>
           <Oven
-            ovenDegrees={ovenDegrees}
-            heatingElement={heatingElement}
             machineState={state}
           />
         </Col>
