@@ -11,8 +11,6 @@ import BiscuitContainer from "./container";
 
 const Machine = () => {
   const [state, setState] = useState("Off");
-  const [ovenDegrees, setOvenDegrees] = useState(0);
-  const [heatingElement, setHeatingElement] = useState(false);
   const [conveyorWorking, setConveyorWorking] = useState(false);
   const [stamping, setStamping] = useState(false);
   const [animationState, setAnimationState] = useState("running");
