@@ -35,20 +35,20 @@ const Machine = () => {
         <Col md={{ span: 2, offset: 1 }}>
           <Oven
             machineState={state}
-            setConveyorWorking={setConveyorWorking}
+            setConveyorWorking={setMotorWorking}
           />
         </Col>
       </Row>
 
       <Row style={{ position: "relative" }}>
-        {conveyorWorking && <BiscuitLifecycle animationState={animationState} onStamp={setStamping} machineState={state}/>}
+        {motorWorking && <BiscuitLifecycle animationState={animationState} onStamp={setStamping} machineState={state}/>}
       </Row>
 
       <Row style={{ height: "75px" }}></Row>
 
       <Row style={{ marginTop: "10px" }}>
         <Col md="6" >
-          <Conveyor conveyorWorking={conveyorWorking} />
+          <Conveyor conveyorWorking={motorWorking} />
         </Col>
       </Row>
 
@@ -60,7 +60,7 @@ const Machine = () => {
 
       <Row>
         <Col md="1" >
-          <Motor conveyorWorking={conveyorWorking} machineState={state}/>
+          <Motor conveyorWorking={motorWorking} machineState={state}/>
         </Col>
 
         <Col md={{ span: 2, offset: 2 }}>
