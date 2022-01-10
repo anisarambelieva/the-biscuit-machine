@@ -60,7 +60,7 @@ const Machine = () => {
 
       <Row>
         <Col md="1" >
-          <Motor conveyorWorking={motorWorking} machineState={state}/>
+          <Motor machineState={state} setMotorWorking={setMotorWorking} motorWorking={motorWorking} />
         </Col>
 
         <Col md={{ span: 2, offset: 2 }}>
