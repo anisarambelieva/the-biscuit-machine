@@ -1,6 +1,6 @@
-const Motor = ({ state }) => (
+const Motor = ({ conveyorWorking }) => (
   <p style={{ backgroundColor: "lightblue", padding: "5px" }}>
-    Motor: {state === "On" ? "working" : "not working"}
+    Motor: {conveyorWorking ? "working" : "not working"}
   </p>
 );
 
