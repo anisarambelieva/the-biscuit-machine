@@ -35,7 +35,7 @@ const Machine = () => {
         <Col md={{ span: 2, offset: 1 }}>
           <Oven
             machineState={state}
-            setConveyorWorking={setMotorWorking}
+            setMotorWorking={setMotorWorking}
           />
         </Col>
       </Row>
