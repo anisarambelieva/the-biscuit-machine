@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "./oven.css";
 
 const Oven = ({ machineState, setConveyorWorking }) => {
   const [ovenDegrees, setOvenDegrees] = useState(0);
@@ -33,9 +32,7 @@ const Oven = ({ machineState, setConveyorWorking }) => {
   }, [ovenDegrees, machineState, setConveyorWorking])
 
   return (
-    <div className={
-      heatingElement ? "heating" : "cooling"
-    } style={{ backgroundColor: "#f2f2f2", padding: "5px" }}>
+    <div style={{ backgroundColor: "#f2f2f2", padding: "5px", borderBottom: "15px solid #f2f2f2" }}>
       <p style={{ margin: 0 }}>{ovenDegrees}</p>
     </div>
   );
