@@ -11,36 +11,9 @@ import BiscuitContainer from "./container";
 
 const Machine = () => {
   const [state, setState] = useState("Off");
-  const [ovenDegrees, setOvenDegrees] = useState(0);
-  const [heatingElement, setHeatingElement] = useState(false);
   const [conveyorWorking, setConveyorWorking] = useState(false);
   const [stamping, setStamping] = useState(false);
   const [animationState, setAnimationState] = useState("running");
-
-  useEffect(() => {
-    if (heatingElement) {
-      setTimeout(() => {
-        if (ovenDegrees < 240) setOvenDegrees(ovenDegrees + 1);
-      }, 1000);
-    } else {
-      setTimeout(() => {
-        if (ovenDegrees > 0) setOvenDegrees(ovenDegrees - 1);
-      }, 1000);
-    }
-  }, [heatingElement, ovenDegrees]);
-
-  useEffect(() => {
-    if (state === "On") {
-      if (ovenDegrees < 220 && !heatingElement) setHeatingElement(true);
-      else if (ovenDegrees > 239) setHeatingElement(false);
-    }
-  }, [state, ovenDegrees, heatingElement]);
-
-  useEffect(() => {
-    if (ovenDegrees >= 220 && state === "On") {
-      setConveyorWorking(true);
-    }
-  }, [ovenDegrees, state])
 
   useEffect(() => {
     if (state === "Paused") setAnimationState("paused");
@@ -60,8 +33,8 @@ const Machine = () => {
 
         <Col md={{ span: 2, offset: 1 }}>
           <Oven
-            ovenDegrees={ovenDegrees}
-            heatingElement={heatingElement}
+            machineState={state}
+            setConveyorWorking={setConveyorWorking}
           />
         </Col>
       </Row>
