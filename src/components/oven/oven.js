@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./oven.css";
 
-const Oven = ({ machineState }) => {
+const Oven = ({ machineState, setConveyorWorking }) => {
   const [ovenDegrees, setOvenDegrees] = useState(0);
   const [heatingElement, setHeatingElement] = useState(false);
 
@@ -25,6 +25,12 @@ const Oven = ({ machineState }) => {
       }, 1000);
     }
   }, [heatingElement, ovenDegrees]);
+
+  useEffect(() => {
+    if (ovenDegrees >= 220 && machineState === "On") {
+      setConveyorWorking(true);
+    }
+  }, [ovenDegrees, machineState, setConveyorWorking])
 
   return (
     <div className={

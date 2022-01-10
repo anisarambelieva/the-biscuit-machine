@@ -18,12 +18,6 @@ const Machine = () => {
   const [animationState, setAnimationState] = useState("running");
 
   useEffect(() => {
-    if (ovenDegrees >= 220 && state === "On") {
-      setConveyorWorking(true);
-    }
-  }, [ovenDegrees, state])
-
-  useEffect(() => {
     if (state === "Paused") setAnimationState("paused");
     else setAnimationState("running");
   }, [animationState, state]);
@@ -42,6 +36,7 @@ const Machine = () => {
         <Col md={{ span: 2, offset: 1 }}>
           <Oven
             machineState={state}
+            setConveyorWorking={setConveyorWorking}
           />
         </Col>
       </Row>
