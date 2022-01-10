@@ -7,6 +7,14 @@ const Motor = ({ conveyorWorking, machineState }) => {
     if (conveyorWorking) setWorking(true);
   }, [conveyorWorking]);
 
+  useEffect(() => {
+    if (working && machineState === "Off") {
+      setTimeout(() => {
+        setWorking(false);
+      }, 15000);
+    }
+  }, [working, machineState]);
+
   return (
     <p style={{ backgroundColor: "lightblue", padding: "5px" }}>
       Motor: {working.toString()}
