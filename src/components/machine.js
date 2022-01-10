@@ -48,7 +48,7 @@ const Machine = () => {
 
       <Row style={{ marginTop: "10px" }}>
         <Col md="6" >
-          <Conveyor conveyorWorking={motorWorking} />
+          <Conveyor conveyorWorking={conveyorWorking} />
         </Col>
       </Row>
 
