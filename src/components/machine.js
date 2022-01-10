@@ -62,6 +62,7 @@ const Machine = () => {
           <Oven
             ovenDegrees={ovenDegrees}
             heatingElement={heatingElement}
+            machineState={state}
           />
         </Col>
       </Row>

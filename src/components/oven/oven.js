@@ -1,6 +1,6 @@
 import "./oven.css";
 
-const Oven = ({ ovenDegrees, heatingElement }) => (
+const Oven = ({ ovenDegrees, heatingElement, machineState }) => (
   <div className={
     heatingElement ? "heating" : "cooling"
   } style={{ backgroundColor: "#f2f2f2", padding: "5px" }}>
