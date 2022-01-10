@@ -1,6 +1,10 @@
 import { useEffect } from "react";
 
-const Motor = ({ machineState, setMotorWorking, motorWorking }) => {
+const Motor = ({ machineState, setMotorWorking, motorWorking, setConveyorWorking }) => {
+  useEffect(() => {
+    setConveyorWorking(motorWorking);
+  }, [motorWorking, setConveyorWorking]);
+
   useEffect(() => {
     if (motorWorking && machineState === "Off") {
       setTimeout(() => {
