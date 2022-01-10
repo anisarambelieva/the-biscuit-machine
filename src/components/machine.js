@@ -41,7 +41,7 @@ const Machine = () => {
       </Row>
 
       <Row style={{ position: "relative" }}>
-        {motorWorking && <BiscuitLifecycle animationState={animationState} onStamp={setStamping} machineState={state}/>}
+        {conveyorWorking && <BiscuitLifecycle animationState={animationState} onStamp={setStamping} machineState={state}/>}
       </Row>
 
       <Row style={{ height: "75px" }}></Row>
