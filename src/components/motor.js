@@ -1,23 +1,21 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
-const Motor = ({ conveyorWorking, machineState }) => {
-  const [working, setWorking] = useState(false);
+const Motor = ({ machineState, setMotorWorking, motorWorking, setConveyorWorking }) => {
+  useEffect(() => {
+    setConveyorWorking(motorWorking);
+  }, [motorWorking, setConveyorWorking]);
 
   useEffect(() => {
-    if (conveyorWorking) setWorking(true);
-  }, [conveyorWorking]);
-
-  useEffect(() => {
-    if (working && machineState === "Off") {
+    if (motorWorking && machineState === "Off") {
       setTimeout(() => {
-        setWorking(false);
+        setMotorWorking(false);
       }, 15000);
     }
-  }, [working, machineState]);
+  }, [machineState, motorWorking, setMotorWorking]);
 
   return (
     <p style={{ backgroundColor: "lightblue", padding: "5px" }}>
-      Motor: {working.toString()}
+      Motor: {motorWorking.toString()}
     </p>
   );
 }

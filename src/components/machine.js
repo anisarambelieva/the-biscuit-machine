@@ -12,6 +12,7 @@ import BiscuitContainer from "./container";
 const Machine = () => {
   const [state, setState] = useState("Off");
   const [conveyorWorking, setConveyorWorking] = useState(false);
+  const [motorWorking, setMotorWorking] = useState(false);
   const [stamping, setStamping] = useState(false);
   const [animationState, setAnimationState] = useState("running");
 
@@ -34,7 +35,7 @@ const Machine = () => {
         <Col md={{ span: 2, offset: 1 }}>
           <Oven
             machineState={state}
-            setConveyorWorking={setConveyorWorking}
+            setMotorWorking={setMotorWorking}
           />
         </Col>
       </Row>
@@ -59,7 +60,7 @@ const Machine = () => {
 
       <Row>
         <Col md="1" >
-          <Motor conveyorWorking={conveyorWorking} machineState={state}/>
+          <Motor machineState={state} setMotorWorking={setMotorWorking} motorWorking={motorWorking} setConveyorWorking={setConveyorWorking} />
         </Col>
 
         <Col md={{ span: 2, offset: 2 }}>

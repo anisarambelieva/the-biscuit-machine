@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const Oven = ({ machineState, setConveyorWorking }) => {
+const Oven = ({ machineState, setMotorWorking }) => {
   const [ovenDegrees, setOvenDegrees] = useState(0);
   const [heatingElement, setHeatingElement] = useState(false);
   const [color, setColor] = useState("");
@@ -28,9 +28,9 @@ const Oven = ({ machineState, setConveyorWorking }) => {
 
   useEffect(() => {
     if (ovenDegrees >= 220 && machineState === "On") {
-      setConveyorWorking(true);
+      setMotorWorking(true);
     }
-  }, [ovenDegrees, machineState, setConveyorWorking])
+  }, [ovenDegrees, machineState, setMotorWorking])
 
   useEffect(() => {
     if (ovenDegrees < 100) setColor("#f2f2f2")
