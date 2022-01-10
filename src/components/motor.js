@@ -15,7 +15,7 @@ const Motor = ({ machineState, setMotorWorking, motorWorking, setConveyorWorking
 
   return (
     <p style={{ backgroundColor: "lightblue", padding: "5px" }}>
-      Motor: {motorWorking.toString()}
+      Motor: {machineState === "Paused" ? "paused" : motorWorking.toString()}
     </p>
   );
 }
