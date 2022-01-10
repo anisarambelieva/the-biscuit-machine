@@ -18,25 +18,6 @@ const Machine = () => {
   const [animationState, setAnimationState] = useState("running");
 
   useEffect(() => {
-    if (heatingElement) {
-      setTimeout(() => {
-        if (ovenDegrees < 240) setOvenDegrees(ovenDegrees + 1);
-      }, 1000);
-    } else {
-      setTimeout(() => {
-        if (ovenDegrees > 0) setOvenDegrees(ovenDegrees - 1);
-      }, 1000);
-    }
-  }, [heatingElement, ovenDegrees]);
-
-  useEffect(() => {
-    if (state === "On") {
-      if (ovenDegrees < 220 && !heatingElement) setHeatingElement(true);
-      else if (ovenDegrees > 239) setHeatingElement(false);
-    }
-  }, [state, ovenDegrees, heatingElement]);
-
-  useEffect(() => {
     if (ovenDegrees >= 220 && state === "On") {
       setConveyorWorking(true);
     }
