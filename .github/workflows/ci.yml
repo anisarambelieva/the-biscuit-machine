@@ -1,0 +1,35 @@
+name: CI-SWAPP
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/ci.yml'
+      - 'public/**'
+      - 'src/**'
+      - 'yarn.lock'
+      - 'package.json'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Read .nvmrc
+        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
+        id: nvm
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '${{ steps.nvm.outputs.NVMRC }}'
+
+      - name: Install Packages
+        run: yarn
+
+      - name: Run CI scripts
+        run: yarn ci
