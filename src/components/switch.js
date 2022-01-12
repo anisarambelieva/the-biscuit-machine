@@ -21,7 +21,7 @@ const Switch = ({ onChange }) => (
     >
       Paused
     </SwitchButton>
-    
+
     <SwitchButton
       onClick={() => onChange("Off")}
       style={{ backgroundColor: "gray", border: "gray" }}
