@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Machine /> should match snapshot 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="row"
+      style="margin-top: 10px;"
+    >
+      <div
+        class="col-md-1"
+      >
+        <div
+          style="background-color: rgb(242, 203, 160); position: absolute; text-align: center; height: 50px; width: 100px;"
+        >
+          Extruder
+        </div>
+      </div>
+      <div
+        class="col-md-1"
+        style="position: relative;"
+      >
+        <div
+          class=""
+          style="background-color: lightgray; position: absolute; text-align: center; height: 50px; width: 100px; z-index: 1;"
+        >
+          Stamper
+        </div>
+      </div>
+      <div
+        class="col-md-2 offset-md-1"
+      >
+        <div
+          style="background-color: rgb(242, 242, 242); padding: 5px; border-bottom: 15px solid #f2f2f2;"
+        >
+          <p
+            style="margin: 0px;"
+          >
+            0
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="row"
+      style="position: relative;"
+    />
+    <div
+      class="row"
+      style="height: 75px;"
+    />
+    <div
+      class="row"
+      style="margin-top: 10px;"
+    >
+      <div
+        class="col-md-6"
+      >
+        <p
+          style="background-color: lightgray; padding: 5px;"
+        >
+          Conveyor
+        </p>
+      </div>
+    </div>
+    <div
+      class="row"
+      style="margin-top: 20px;"
+    >
+      <div
+        class="col-md-2 offset-md-5"
+      >
+        <p
+          style="background-color: lightgray; padding: 5px;"
+        >
+          Container
+        </p>
+      </div>
+    </div>
+    <div
+      class="row"
+    >
+      <div
+        class="col-md-1"
+      >
+        <p
+          style="background-color: lightblue; padding: 5px;"
+        >
+          Motor: 
+          false
+        </p>
+      </div>
+      <div
+        class="col-md-2 offset-md-2"
+      >
+        <div
+          style="padding: 5px; background-color: lightgray;"
+        >
+          <p>
+            Switch
+          </p>
+          <button
+            class="sc-bdvvtL eWZskW btn btn-primary"
+            style="margin-right: 5px; background-color: gray; border: gray;"
+            type="button"
+          >
+            On
+          </button>
+          <button
+            class="sc-bdvvtL eWZskW btn btn-primary"
+            style="margin-right: 5px; background-color: gray; border: gray;"
+            type="button"
+          >
+            Paused
+          </button>
+          <button
+            class="sc-bdvvtL eWZskW btn btn-primary"
+            style="background-color: gray; border: gray;"
+            type="button"
+          >
+            Off
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
