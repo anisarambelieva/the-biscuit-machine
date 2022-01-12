@@ -13,4 +13,16 @@ describe("<Switch />", () => {
       timeout: 1000,
     });
   });
+
+  it("should pause motor", async () => {
+    render(<Machine />);
+    const button = screen.getByRole("button", {
+      name: /Paused/i,
+    });
+
+    fireEvent.click(button);
+    await waitFor(() => expect(screen.getByText(/Motor: paused/i)).toBeInTheDocument(), {
+      timeout: 1000,
+    });
+  });
 });
