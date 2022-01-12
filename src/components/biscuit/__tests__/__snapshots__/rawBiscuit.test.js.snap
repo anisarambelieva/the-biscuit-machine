@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Biscuit /> should match snapshot 1`] = `
+<div>
+  <div
+    class="biscuit"
+    style="margin: 65px 0px 0px 0px; position: absolute; padding-left: 25px;"
+  >
+    Biscuit
+  </div>
+</div>
+`;

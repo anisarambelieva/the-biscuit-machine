@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BiscuitLifecycle /> should match snapshot 1`] = `
+<div>
+  <div
+    class="col-md-1"
+  >
+    <div
+      class="dough"
+      style="margin: 0px; position: absolute; padding-left: 20px;"
+    >
+      Dough
+    </div>
+  </div>
+  <div
+    class="col-md-1"
+  />
+  <div
+    class="col-md-1 offset-md-2"
+  />
+</div>
+`;
