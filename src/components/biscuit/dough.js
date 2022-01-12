@@ -14,12 +14,12 @@ const Dough = ({ onAnimationEnd, state, onStamp, machineState }) => {
 
         setTimeout(() => {
           setClassName("dough");
-          setAnimationsCount(1)
-        }, 100)
+          setAnimationsCount(1);
+        }, 100);
       }
-      
+
       onAnimationEnd(true);
-      
+
       setTimeout(() => {
         onStamp(false);
       }, 1000);
@@ -36,7 +36,7 @@ const Dough = ({ onAnimationEnd, state, onStamp, machineState }) => {
         margin: 0,
         position: "absolute",
         WebkitAnimationPlayState: state,
-        paddingLeft: "20px"
+        paddingLeft: "20px",
       }}
     >
       Dough

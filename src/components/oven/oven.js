@@ -30,21 +30,27 @@ const Oven = ({ machineState, setMotorWorking }) => {
     if (ovenDegrees >= 220 && machineState === "On") {
       setMotorWorking(true);
     }
-  }, [ovenDegrees, machineState, setMotorWorking])
+  }, [ovenDegrees, machineState, setMotorWorking]);
 
   useEffect(() => {
-    if (ovenDegrees < 100) setColor("#f2f2f2")
-    else if (ovenDegrees < 150) setColor("#f3dcd3")
-    else if (ovenDegrees < 200) setColor("#f0a78b")
-    else if (ovenDegrees < 219) setColor("#f3946c")
-    else if (ovenDegrees < 240) setColor("#f0703e")
+    if (ovenDegrees < 100) setColor("#f2f2f2");
+    else if (ovenDegrees < 150) setColor("#f3dcd3");
+    else if (ovenDegrees < 200) setColor("#f0a78b");
+    else if (ovenDegrees < 219) setColor("#f3946c");
+    else if (ovenDegrees < 240) setColor("#f0703e");
   }, [ovenDegrees]);
 
   return (
-    <div style={{ backgroundColor: "#f2f2f2", padding: "5px", borderBottom: `15px solid ${color}` }}>
+    <div
+      style={{
+        backgroundColor: "#f2f2f2",
+        padding: "5px",
+        borderBottom: `15px solid ${color}`,
+      }}
+    >
       <p style={{ margin: 0 }}>{ovenDegrees}</p>
     </div>
   );
-}
+};
 
 export default Oven;

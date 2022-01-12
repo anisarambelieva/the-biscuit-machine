@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Conveyor from "./conveyor";
-import Oven from "./oven/oven";
-import Switch from "./switch";
-import BiscuitLifecycle from "./biscuit/biscuitLifecycle";
-import Stamper from "./stamper/stamper";
-import Extruder from "./extruder";
-import Motor from "./motor";
-import BiscuitContainer from "./container";
+
+import BiscuitLifecycle from "./biscuit/biscuitLifecycle.js";
+import BiscuitContainer from "./container.js";
+import Conveyor from "./conveyor.js";
+import Extruder from "./extruder.js";
+import Motor from "./motor.js";
+import Oven from "./oven/oven.js";
+import Stamper from "./stamper/stamper.js";
+import Switch from "./switch.js";
 
 const Machine = () => {
   const [state, setState] = useState("Off");
@@ -33,34 +34,42 @@ const Machine = () => {
         </Col>
 
         <Col md={{ span: 2, offset: 1 }}>
-          <Oven
-            machineState={state}
-            setMotorWorking={setMotorWorking}
-          />
+          <Oven machineState={state} setMotorWorking={setMotorWorking} />
         </Col>
       </Row>
 
       <Row style={{ position: "relative" }}>
-        {conveyorWorking && <BiscuitLifecycle animationState={animationState} onStamp={setStamping} machineState={state}/>}
+        {conveyorWorking && (
+          <BiscuitLifecycle
+            animationState={animationState}
+            onStamp={setStamping}
+            machineState={state}
+          />
+        )}
       </Row>
 
       <Row style={{ height: "75px" }}></Row>
 
       <Row style={{ marginTop: "10px" }}>
-        <Col md="6" >
+        <Col md="6">
           <Conveyor conveyorWorking={conveyorWorking} />
         </Col>
       </Row>
 
       <Row style={{ marginTop: "20px" }}>
         <Col md={{ span: 2, offset: 5 }}>
-          <BiscuitContainer/>
+          <BiscuitContainer />
         </Col>
       </Row>
 
       <Row>
-        <Col md="1" >
-          <Motor machineState={state} setMotorWorking={setMotorWorking} motorWorking={motorWorking} setConveyorWorking={setConveyorWorking} />
+        <Col md="1">
+          <Motor
+            machineState={state}
+            setMotorWorking={setMotorWorking}
+            motorWorking={motorWorking}
+            setConveyorWorking={setConveyorWorking}
+          />
         </Col>
 
         <Col md={{ span: 2, offset: 2 }}>

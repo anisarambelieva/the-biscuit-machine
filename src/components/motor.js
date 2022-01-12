@@ -1,6 +1,11 @@
 import { useEffect } from "react";
 
-const Motor = ({ machineState, setMotorWorking, motorWorking, setConveyorWorking }) => {
+const Motor = ({
+  machineState,
+  setMotorWorking,
+  motorWorking,
+  setConveyorWorking,
+}) => {
   useEffect(() => {
     setConveyorWorking(motorWorking);
   }, [motorWorking, setConveyorWorking]);
@@ -18,6 +23,6 @@ const Motor = ({ machineState, setMotorWorking, motorWorking, setConveyorWorking
       Motor: {machineState === "Paused" ? "paused" : motorWorking.toString()}
     </p>
   );
-}
+};
 
 export default Motor;

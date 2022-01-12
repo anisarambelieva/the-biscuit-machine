@@ -19,7 +19,7 @@ const BakedBiscuit = ({ state, onBaked }) => {
         position: "absolute",
         WebkitAnimationPlayState: state,
         paddingLeft: "25px",
-        zIndex: "-1"
+        zIndex: "-1",
       }}
     >
       Baked

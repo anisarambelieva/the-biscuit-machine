@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Col } from "react-bootstrap";
-import BakedBiscuit from "./bakedBiscuit";
-import Dough from "./dough";
-import Biscuit from "./rawBiscuit";
+
+import BakedBiscuit from "./bakedBiscuit.js";
+import Dough from "./dough.js";
+import Biscuit from "./rawBiscuit.js";
 
 const BiscuitLifecycle = ({ animationState, onStamp, machineState }) => {
   const [stamped, setStamped] = useState(false);
@@ -11,7 +12,12 @@ const BiscuitLifecycle = ({ animationState, onStamp, machineState }) => {
   return (
     <>
       <Col md="1">
-        <Dough onAnimationEnd={setStamped} onStamp={onStamp} state={animationState} machineState={machineState} />
+        <Dough
+          onAnimationEnd={setStamped}
+          onStamp={onStamp}
+          state={animationState}
+          machineState={machineState}
+        />
       </Col>
 
       <Col md="1">
