@@ -1,5 +1,5 @@
-import Machine from "./components/machine";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Machine from "./components/machine.js";
 
 function App() {
   return (

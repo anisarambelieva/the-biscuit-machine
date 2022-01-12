@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Conveyor from "./conveyor";
-import Oven from "./oven/oven";
-import Switch from "./switch";
-import BiscuitLifecycle from "./biscuit/biscuitLifecycle";
-import Stamper from "./stamper/stamper";
-import Extruder from "./extruder";
-import Motor from "./motor";
-import BiscuitContainer from "./container";
+
+import BiscuitLifecycle from "./biscuit/biscuitLifecycle.js";
+import BiscuitContainer from "./container.js";
+import Conveyor from "./conveyor.js";
+import Extruder from "./extruder.js";
+import Motor from "./motor.js";
+import Oven from "./oven/oven.js";
+import Stamper from "./stamper/stamper.js";
+import Switch from "./switch.js";
 
 const Machine = () => {
   const [state, setState] = useState("Off");
