@@ -1,4 +1,4 @@
-const Conveyor = ({ conveyorWorking }) => (
+const Conveyor = () => (
   <p style={{ backgroundColor: "lightgray", padding: "5px" }}>
     Conveyor
   </p>
