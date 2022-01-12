@@ -12,7 +12,12 @@ const BiscuitLifecycle = ({ animationState, onStamp, machineState }) => {
   return (
     <>
       <Col md="1">
-        <Dough onAnimationEnd={setStamped} onStamp={onStamp} state={animationState} machineState={machineState} />
+        <Dough
+          onAnimationEnd={setStamped}
+          onStamp={onStamp}
+          state={animationState}
+          machineState={machineState}
+        />
       </Col>
 
       <Col md="1">

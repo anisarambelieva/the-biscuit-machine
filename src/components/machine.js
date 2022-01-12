@@ -34,34 +34,42 @@ const Machine = () => {
         </Col>
 
         <Col md={{ span: 2, offset: 1 }}>
-          <Oven
-            machineState={state}
-            setMotorWorking={setMotorWorking}
-          />
+          <Oven machineState={state} setMotorWorking={setMotorWorking} />
         </Col>
       </Row>
 
       <Row style={{ position: "relative" }}>
-        {conveyorWorking && <BiscuitLifecycle animationState={animationState} onStamp={setStamping} machineState={state}/>}
+        {conveyorWorking && (
+          <BiscuitLifecycle
+            animationState={animationState}
+            onStamp={setStamping}
+            machineState={state}
+          />
+        )}
       </Row>
 
       <Row style={{ height: "75px" }}></Row>
 
       <Row style={{ marginTop: "10px" }}>
-        <Col md="6" >
+        <Col md="6">
           <Conveyor conveyorWorking={conveyorWorking} />
         </Col>
       </Row>
 
       <Row style={{ marginTop: "20px" }}>
         <Col md={{ span: 2, offset: 5 }}>
-          <BiscuitContainer/>
+          <BiscuitContainer />
         </Col>
       </Row>
 
       <Row>
-        <Col md="1" >
-          <Motor machineState={state} setMotorWorking={setMotorWorking} motorWorking={motorWorking} setConveyorWorking={setConveyorWorking} />
+        <Col md="1">
+          <Motor
+            machineState={state}
+            setMotorWorking={setMotorWorking}
+            motorWorking={motorWorking}
+            setConveyorWorking={setConveyorWorking}
+          />
         </Col>
 
         <Col md={{ span: 2, offset: 2 }}>
