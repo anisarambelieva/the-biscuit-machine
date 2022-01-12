@@ -6,7 +6,7 @@ import BiscuitContainer from "./container.js";
 import Conveyor from "./conveyor.js";
 import Extruder from "./extruder.js";
 import Motor from "./motor.js";
-import Oven from "./oven/oven.js";
+import Oven from "./oven.js";
 import Stamper from "./stamper/stamper.js";
 import Switch from "./switch.js";
 
