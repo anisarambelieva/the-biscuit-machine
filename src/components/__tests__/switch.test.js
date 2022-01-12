@@ -1,4 +1,5 @@
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+
 import Machine from "../machine.js";
 
 describe("<Switch />", () => {
@@ -21,8 +22,11 @@ describe("<Switch />", () => {
     });
 
     fireEvent.click(button);
-    await waitFor(() => expect(screen.getByText(/Motor: paused/i)).toBeInTheDocument(), {
-      timeout: 1000,
-    });
+    await waitFor(
+      () => expect(screen.getByText(/Motor: paused/i)).toBeInTheDocument(),
+      {
+        timeout: 1000,
+      }
+    );
   });
 });
