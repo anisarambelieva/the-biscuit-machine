@@ -18,6 +18,6 @@ const Motor = ({ machineState, setMotorWorking, motorWorking, setConveyorWorking
       Motor: {machineState === "Paused" ? "paused" : motorWorking.toString()}
     </p>
   );
-}
+};
 
 export default Motor;

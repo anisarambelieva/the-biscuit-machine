@@ -14,8 +14,8 @@ const Dough = ({ onAnimationEnd, state, onStamp, machineState }) => {
 
         setTimeout(() => {
           setClassName("dough");
-          setAnimationsCount(1)
-        }, 100)
+          setAnimationsCount(1);
+        }, 100);
       }
       
       onAnimationEnd(true);

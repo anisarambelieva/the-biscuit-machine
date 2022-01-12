@@ -2,8 +2,8 @@ import { Button } from "react-bootstrap";
 import styled from "styled-components";
 
 const SwitchButton = styled(Button)`
-    padding: 0 3px;
-`
+  padding: 0 3px;
+`;
 
 const Switch = ({ onChange }) => {
   return (
