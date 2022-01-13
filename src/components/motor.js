@@ -14,7 +14,7 @@ const Motor = ({
     if (motorWorking && machineState === "Off") {
       setTimeout(() => {
         setMotorWorking(false);
-      }, 15000);
+      }, 17000);
     }
   }, [machineState, motorWorking, setMotorWorking]);
 
