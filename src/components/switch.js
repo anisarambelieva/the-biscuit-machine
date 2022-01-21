@@ -9,28 +9,28 @@ const Switch = ({ onChange }) => (
   <div
     style={{
       padding: "5px",
-      backgroundColor: "lightgray",
+      backgroundColor: "#FADCD9",
       borderRadius: "5px",
     }}
   >
     <p>Switch</p>
     <SwitchButton
       onClick={() => onChange("On")}
-      style={{ marginRight: "5px", backgroundColor: "gray", border: "gray" }}
+      style={{ marginRight: "5px", backgroundColor: "#AB8281", border: "gray" }}
     >
       On
     </SwitchButton>
 
     <SwitchButton
       onClick={() => onChange("Paused")}
-      style={{ marginRight: "5px", backgroundColor: "gray", border: "gray" }}
+      style={{ marginRight: "5px", backgroundColor: "#AB8281", border: "gray" }}
     >
       Paused
     </SwitchButton>
 
     <SwitchButton
       onClick={() => onChange("Off")}
-      style={{ backgroundColor: "gray", border: "gray" }}
+      style={{ backgroundColor: "#AB8281", border: "gray" }}
     >
       Off
     </SwitchButton>

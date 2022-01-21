@@ -4,7 +4,7 @@ const Stamper = ({ stamp, animationState }) => (
   <div
     className={stamp ? "stamper" : ""}
     style={{
-      backgroundColor: "lightgray",
+      backgroundColor: "#DCD2CC",
       position: "absolute",
       textAlign: "center",
       height: "50px",

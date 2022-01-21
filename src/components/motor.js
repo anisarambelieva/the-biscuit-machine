@@ -33,7 +33,7 @@ const Motor = ({
   return (
     <p
       style={{
-        backgroundColor: "lightblue",
+        backgroundColor: "#ABDEE0",
         padding: "5px",
         borderRadius: "5px",
       }}

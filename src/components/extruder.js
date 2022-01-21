@@ -1,7 +1,7 @@
 const Extruder = () => (
   <div
     style={{
-      backgroundColor: "#f2cba0",
+      backgroundColor: "#FADCD9",
       position: "absolute",
       textAlign: "center",
       height: "50px",
