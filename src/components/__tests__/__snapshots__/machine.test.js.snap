@@ -13,7 +13,7 @@ exports[`<Machine /> should match snapshot 1`] = `
         class="col-md-1"
       >
         <div
-          style="background-color: rgb(242, 203, 160); position: absolute; text-align: center; height: 50px; width: 100px; border-radius: 5px;"
+          style="background-color: rgb(250, 220, 217); position: absolute; text-align: center; height: 50px; width: 100px; border-radius: 5px;"
         >
           Extruder
         </div>
@@ -24,7 +24,7 @@ exports[`<Machine /> should match snapshot 1`] = `
       >
         <div
           class=""
-          style="background-color: lightgray; position: absolute; text-align: center; height: 50px; width: 100px; z-index: 1; border-radius: 5px;"
+          style="background-color: rgb(220, 210, 204); position: absolute; text-align: center; height: 50px; width: 100px; z-index: 1; border-radius: 5px;"
         >
           Stamper
         </div>
@@ -59,7 +59,7 @@ exports[`<Machine /> should match snapshot 1`] = `
         class="col-md-6"
       >
         <p
-          style="background-color: lightgray; padding: 5px; border-radius: 10px;"
+          style="background-color: rgb(220, 210, 204); padding: 5px; border-radius: 10px;"
         >
           Conveyor
         </p>
@@ -73,7 +73,7 @@ exports[`<Machine /> should match snapshot 1`] = `
         class="col-md-2 offset-md-5"
       >
         <p
-          style="background-color: lightgray; padding: 5px; border-radius: 5px;"
+          style="background-color: rgb(220, 210, 204); padding: 5px; border-radius: 5px;"
         >
           Container
         </p>
@@ -86,7 +86,7 @@ exports[`<Machine /> should match snapshot 1`] = `
         class="col-md-1"
       >
         <p
-          style="background-color: lightblue; padding: 5px; border-radius: 5px;"
+          style="background-color: rgb(171, 222, 224); padding: 5px; border-radius: 5px;"
         >
           Motor: 
           turned off
@@ -96,28 +96,28 @@ exports[`<Machine /> should match snapshot 1`] = `
         class="col-md-2 offset-md-2"
       >
         <div
-          style="padding: 5px; background-color: lightgray; border-radius: 5px;"
+          style="padding: 5px; background-color: rgb(250, 220, 217); border-radius: 5px;"
         >
           <p>
             Switch
           </p>
           <button
             class="sc-bdvvtL eWZskW btn btn-primary"
-            style="margin-right: 5px; background-color: gray; border: gray;"
+            style="margin-right: 5px; background-color: rgb(171, 130, 129); border: gray;"
             type="button"
           >
             On
           </button>
           <button
             class="sc-bdvvtL eWZskW btn btn-primary"
-            style="margin-right: 5px; background-color: gray; border: gray;"
+            style="margin-right: 5px; background-color: rgb(171, 130, 129); border: gray;"
             type="button"
           >
             Paused
           </button>
           <button
             class="sc-bdvvtL eWZskW btn btn-primary"
-            style="background-color: gray; border: gray;"
+            style="background-color: rgb(171, 130, 129); border: gray;"
             type="button"
           >
             Off
