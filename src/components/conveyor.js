@@ -1,7 +1,7 @@
 const Conveyor = () => (
   <p
     style={{
-      backgroundColor: "lightgray",
+      backgroundColor: "#DCD2CC",
       padding: "5px",
       borderRadius: "10px",
     }}
