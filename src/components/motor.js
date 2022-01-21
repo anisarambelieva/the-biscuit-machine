@@ -9,6 +9,16 @@ const Motor = ({
   const [motorLabel, setMotorLabel] = useState("turned off");
 
   useEffect(() => {
+    if (machineState === "Paused") {
+      setMotorLabel("paused");
+    } else if (motorWorking) {
+      setMotorLabel("working");
+    } else {
+      setMotorLabel("turned off");
+    }
+  }, [machineState, motorWorking]);
+
+  useEffect(() => {
     setConveyorWorking(motorWorking);
   }, [motorWorking, setConveyorWorking]);
 
