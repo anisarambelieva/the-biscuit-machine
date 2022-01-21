@@ -31,11 +31,11 @@ const Oven = ({ machineState, setMotorWorking, fasterHeating }) => {
 
     if (heatingElement) {
       timer = setTimeout(() => {
-        if (ovenDegrees < 240) setOvenDegrees(ovenDegrees + 1);
+        if (ovenDegrees < 240) setOvenDegrees((ovenDegrees) => ovenDegrees + 1);
       }, heatingTimeout);
     } else {
       timer = setTimeout(() => {
-        if (ovenDegrees > 0) setOvenDegrees(ovenDegrees - 1);
+        if (ovenDegrees > 0) setOvenDegrees((ovenDegrees) => ovenDegrees - 1);
       }, 1000);
     }
 
