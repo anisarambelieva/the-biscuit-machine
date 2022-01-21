@@ -46,6 +46,7 @@ const Oven = ({ machineState, setMotorWorking }) => {
         backgroundColor: "#f2f2f2",
         padding: "5px",
         borderBottom: `15px solid ${color}`,
+        borderRadius: "5px",
       }}
     >
       <p style={{ margin: 0 }}>{ovenDegrees}</p>

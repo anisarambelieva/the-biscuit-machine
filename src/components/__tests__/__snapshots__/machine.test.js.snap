@@ -13,7 +13,7 @@ exports[`<Machine /> should match snapshot 1`] = `
         class="col-md-1"
       >
         <div
-          style="background-color: rgb(242, 203, 160); position: absolute; text-align: center; height: 50px; width: 100px;"
+          style="background-color: rgb(242, 203, 160); position: absolute; text-align: center; height: 50px; width: 100px; border-radius: 5px;"
         >
           Extruder
         </div>
@@ -24,7 +24,7 @@ exports[`<Machine /> should match snapshot 1`] = `
       >
         <div
           class=""
-          style="background-color: lightgray; position: absolute; text-align: center; height: 50px; width: 100px; z-index: 1;"
+          style="background-color: lightgray; position: absolute; text-align: center; height: 50px; width: 100px; z-index: 1; border-radius: 5px;"
         >
           Stamper
         </div>
@@ -33,7 +33,7 @@ exports[`<Machine /> should match snapshot 1`] = `
         class="col-md-2 offset-md-1"
       >
         <div
-          style="background-color: rgb(242, 242, 242); padding: 5px; border-bottom: 15px solid #f2f2f2;"
+          style="background-color: rgb(242, 242, 242); padding: 5px; border-radius: 5px; border-bottom: 15px solid #f2f2f2;"
         >
           <p
             style="margin: 0px;"
@@ -59,7 +59,7 @@ exports[`<Machine /> should match snapshot 1`] = `
         class="col-md-6"
       >
         <p
-          style="background-color: lightgray; padding: 5px;"
+          style="background-color: lightgray; padding: 5px; border-radius: 10px;"
         >
           Conveyor
         </p>
@@ -73,7 +73,7 @@ exports[`<Machine /> should match snapshot 1`] = `
         class="col-md-2 offset-md-5"
       >
         <p
-          style="background-color: lightgray; padding: 5px;"
+          style="background-color: lightgray; padding: 5px; border-radius: 5px;"
         >
           Container
         </p>
@@ -86,7 +86,7 @@ exports[`<Machine /> should match snapshot 1`] = `
         class="col-md-1"
       >
         <p
-          style="background-color: lightblue; padding: 5px;"
+          style="background-color: lightblue; padding: 5px; border-radius: 5px;"
         >
           Motor: 
           turned off
@@ -96,7 +96,7 @@ exports[`<Machine /> should match snapshot 1`] = `
         class="col-md-2 offset-md-2"
       >
         <div
-          style="padding: 5px; background-color: lightgray;"
+          style="padding: 5px; background-color: lightgray; border-radius: 5px;"
         >
           <p>
             Switch

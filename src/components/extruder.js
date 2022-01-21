@@ -6,6 +6,7 @@ const Extruder = () => (
       textAlign: "center",
       height: "50px",
       width: "100px",
+      borderRadius: "5px",
     }}
   >
     Extruder
