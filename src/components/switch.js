@@ -6,7 +6,13 @@ const SwitchButton = styled(Button)`
 `;
 
 const Switch = ({ onChange }) => (
-  <div style={{ padding: "5px", backgroundColor: "lightgray" }}>
+  <div
+    style={{
+      padding: "5px",
+      backgroundColor: "lightgray",
+      borderRadius: "5px",
+    }}
+  >
     <p>Switch</p>
     <SwitchButton
       onClick={() => onChange("On")}
