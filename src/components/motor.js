@@ -31,7 +31,13 @@ const Motor = ({
   }, [machineState, motorWorking, setMotorWorking]);
 
   return (
-    <p style={{ backgroundColor: "lightblue", padding: "5px" }}>
+    <p
+      style={{
+        backgroundColor: "lightblue",
+        padding: "5px",
+        borderRadius: "5px",
+      }}
+    >
       Motor: {motorLabel}
     </p>
   );
