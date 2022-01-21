@@ -1,4 +1,4 @@
-name: CI-SWAPP
+name: CI-BISCUIT-MACHINE
 
 on:
   pull_request:
