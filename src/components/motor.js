@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Motor = ({
   machineState,
@@ -6,6 +6,8 @@ const Motor = ({
   motorWorking,
   setConveyorWorking,
 }) => {
+  const [motorLabel, setMotorLabel] = useState("turned off");
+
   useEffect(() => {
     setConveyorWorking(motorWorking);
   }, [motorWorking, setConveyorWorking]);
@@ -20,7 +22,7 @@ const Motor = ({
 
   return (
     <p style={{ backgroundColor: "lightblue", padding: "5px" }}>
-      Motor: {machineState === "Paused" ? "paused" : motorWorking.toString()}
+      Motor: {motorLabel}
     </p>
   );
 };
