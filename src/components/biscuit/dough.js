@@ -33,10 +33,7 @@ const Dough = ({ onAnimationEnd, state, onStamp, machineState }) => {
       onAnimationEnd={handleAnimationEnd}
       className={className}
       style={{
-        margin: 0,
-        position: "absolute",
         WebkitAnimationPlayState: state,
-        paddingLeft: "20px",
       }}
     >
       Dough
