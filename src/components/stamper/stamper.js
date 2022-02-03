@@ -2,7 +2,7 @@ import "./stamper.css";
 
 const Stamper = ({ stamp, animationState }) => (
   <div
-    className={stamp ? "stamper" : ""}
+    className={stamp ? "stamper animated" : "stamper"}
     style={{
       WebkitAnimationPlayState: animationState,
     }}
