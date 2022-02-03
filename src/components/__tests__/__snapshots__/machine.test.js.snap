@@ -23,8 +23,7 @@ exports[`<Machine /> should match snapshot 1`] = `
         style="position: relative;"
       >
         <div
-          class=""
-          style="background-color: rgb(220, 210, 204); position: absolute; text-align: center; height: 50px; width: 100px; z-index: 1; border-radius: 5px;"
+          class="stamper"
         >
           Stamper
         </div>

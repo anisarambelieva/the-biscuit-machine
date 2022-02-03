@@ -1,8 +1,18 @@
-.stamper {
+.animatedStamper {
   animation-duration: 1s, 1s;
   animation-delay: 0s, 1s;
   animation-name: down, up;
   animation-fill-mode: forwards;
+}
+
+.stamper {
+  background-color: #dcd2cc;
+  position: absolute;
+  text-align: center;
+  height: 50px;
+  width: 100px;
+  z-index: 1;
+  border-radius: 5px;
 }
 
 @keyframes down {
