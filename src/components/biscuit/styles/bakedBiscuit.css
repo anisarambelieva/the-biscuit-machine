@@ -1,8 +1,13 @@
-.bakedBiscuit {
+.animatedBakedBiscuit {
   animation-duration: 4s, 1s, 0s;
   animation-delay: 0s, 4s, 5s;
   animation-name: conveyorBakedBiscuit, dropBakedBiscuit, disappearBakedBiscuit;
   animation-fill-mode: forwards;
+  margin: 0;
+  margin-top: 65px;
+  position: absolute;
+  padding-left: 25px;
+  z-index: -1;
 }
 
 @keyframes conveyorBakedBiscuit {
