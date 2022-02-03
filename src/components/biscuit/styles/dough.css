@@ -5,6 +5,12 @@
   animation-fill-mode: forwards;
 }
 
+.dough {
+  margin: 0;
+  position: absolute;
+  padding-left: 20px;
+}
+
 @keyframes dropDough {
   from {
     margin-top: 0%;
