@@ -1,4 +1,6 @@
 # The Biscuit Machine
+Online preview: https://the-biscuit-machine.netlify.app
+
 The Machine operates in the following way:
 - When switched on, the machine waits for the oven to warm up before starting the conveyor belt.
 - The Extruder drops dough on the conveyor which gets moved and stamped.
