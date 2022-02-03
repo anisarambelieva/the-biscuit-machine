@@ -3,6 +3,10 @@
   animation-delay: 0s, 5s;
   animation-name: conveyorBiscuit, disappearBiscuit;
   animation-fill-mode: forwards;
+  margin: 0;
+  margin-top: 65px;
+  position: absolute;
+  padding-left: 25px;
 }
 
 @keyframes conveyorBiscuit {
