@@ -1,8 +1,14 @@
-.dough {
+.animatedDough {
   animation-duration: 2s, 4s, 1s, 0s;
   animation-delay: 0s, 2s, 6s, 7s;
   animation-name: dropDough, conveyorDough, wait, disappearDough;
   animation-fill-mode: forwards;
+}
+
+.dough {
+  margin: 0;
+  position: absolute;
+  padding-left: 20px;
 }
 
 @keyframes dropDough {

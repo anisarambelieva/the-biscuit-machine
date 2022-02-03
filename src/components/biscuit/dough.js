@@ -3,17 +3,17 @@ import "./styles/dough.css";
 
 const Dough = ({ onAnimationEnd, state, onStamp, machineState }) => {
   const [animationsCount, setAnimationsCount] = useState(1);
-  const [className, setClassName] = useState("dough");
+  const [className, setClassName] = useState("dough animatedDough");
 
   const handleAnimationEnd = () => {
     setAnimationsCount(animationsCount + 1);
 
     if (animationsCount === 4) {
       if (machineState !== "Off") {
-        setClassName("");
+        setClassName("dough");
 
         setTimeout(() => {
-          setClassName("dough");
+          setClassName("dough animatedDough");
           setAnimationsCount(1);
         }, 100);
       }
@@ -33,10 +33,7 @@ const Dough = ({ onAnimationEnd, state, onStamp, machineState }) => {
       onAnimationEnd={handleAnimationEnd}
       className={className}
       style={{
-        margin: 0,
-        position: "absolute",
         WebkitAnimationPlayState: state,
-        paddingLeft: "20px",
       }}
     >
       Dough
