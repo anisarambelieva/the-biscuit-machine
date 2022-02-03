@@ -14,12 +14,7 @@ const BakedBiscuit = ({ state, onBaked }) => {
       onAnimationEnd={handleAnimationEnd}
       className="animatedBakedBiscuit"
       style={{
-        margin: 0,
-        marginTop: "65px",
-        position: "absolute",
         WebkitAnimationPlayState: state,
-        paddingLeft: "25px",
-        zIndex: "-1",
       }}
     >
       Baked
