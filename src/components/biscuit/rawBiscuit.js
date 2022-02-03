@@ -16,11 +16,7 @@ const Biscuit = ({ onAnimationEnd, state, onStamp }) => {
       onAnimationEnd={handleAnimationEnd}
       className="biscuit"
       style={{
-        margin: 0,
-        marginTop: "65px",
-        position: "absolute",
         WebkitAnimationPlayState: state,
-        paddingLeft: "25px",
       }}
     >
       Biscuit
