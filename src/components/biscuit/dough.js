@@ -3,7 +3,7 @@ import "./styles/dough.css";
 
 const Dough = ({ onAnimationEnd, state, onStamp, machineState }) => {
   const [animationsCount, setAnimationsCount] = useState(1);
-  const [className, setClassName] = useState("dough");
+  const [className, setClassName] = useState("animatedDough");
 
   const handleAnimationEnd = () => {
     setAnimationsCount(animationsCount + 1);
@@ -13,7 +13,7 @@ const Dough = ({ onAnimationEnd, state, onStamp, machineState }) => {
         setClassName("");
 
         setTimeout(() => {
-          setClassName("dough");
+          setClassName("animatedDough");
           setAnimationsCount(1);
         }, 100);
       }
