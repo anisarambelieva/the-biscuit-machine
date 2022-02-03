@@ -3,8 +3,7 @@
 exports[`<BakedBiscuit /> should match snapshot 1`] = `
 <div>
   <div
-    class="bakedBiscuit"
-    style="margin: 65px 0px 0px 0px; position: absolute; padding-left: 25px; z-index: -1;"
+    class="animatedBakedBiscuit"
   >
     Baked
   </div>
