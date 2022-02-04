@@ -1,8 +1,8 @@
 import { Form } from "react-bootstrap";
 
-const BoostSwitch = () => (
+const BoostSwitch = ({ onChange }) => (
   <Form>
-    <Form.Check type="switch" label="Faster heating" />
+    <Form.Check type="switch" label="Faster heating" onChange={onChange} />
   </Form>
 );
 

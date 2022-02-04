@@ -80,7 +80,7 @@ const Machine = () => {
       </Row>
 
       <Row>
-        <BoostSwitch />
+        <BoostSwitch onChange={() => setFasterHeating(!fasterHeating)} />
       </Row>
     </Container>
   );
