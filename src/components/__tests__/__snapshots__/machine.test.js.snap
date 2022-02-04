@@ -124,6 +124,28 @@ exports[`<Machine /> should match snapshot 1`] = `
         </div>
       </div>
     </div>
+    <div
+      class="row"
+    >
+      <form
+        class=""
+      >
+        <div
+          class="form-check form-switch"
+        >
+          <input
+            class="form-check-input"
+            type="checkbox"
+          />
+          <label
+            class="form-check-label"
+            title=""
+          >
+            Faster heating
+          </label>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
 `;

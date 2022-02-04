@@ -1,9 +1,18 @@
 import { useEffect, useState } from "react";
 
-const Oven = ({ machineState, setMotorWorking }) => {
+const Oven = ({ machineState, setMotorWorking, fasterHeating }) => {
   const [ovenDegrees, setOvenDegrees] = useState(0);
   const [heatingElement, setHeatingElement] = useState(false);
   const [color, setColor] = useState("");
+  const [heatingTimeout, setHeatingTimeout] = useState(1000);
+
+  useEffect(() => {
+    if (fasterHeating) {
+      setHeatingTimeout(100);
+    } else {
+      setHeatingTimeout(1000);
+    }
+  }, [fasterHeating]);
 
   useEffect(() => {
     if (
@@ -23,7 +32,7 @@ const Oven = ({ machineState, setMotorWorking }) => {
     if (heatingElement) {
       timer = setTimeout(() => {
         if (ovenDegrees < 240) setOvenDegrees(ovenDegrees + 1);
-      }, 1000);
+      }, heatingTimeout);
     } else {
       timer = setTimeout(() => {
         if (ovenDegrees > 0) setOvenDegrees(ovenDegrees - 1);
@@ -31,7 +40,7 @@ const Oven = ({ machineState, setMotorWorking }) => {
     }
 
     return () => clearTimeout(timer);
-  }, [heatingElement, ovenDegrees]);
+  }, [heatingElement, ovenDegrees, heatingTimeout]);
 
   useEffect(() => {
     if (ovenDegrees >= 220 && machineState === "On") {

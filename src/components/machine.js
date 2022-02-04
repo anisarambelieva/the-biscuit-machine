@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 import BiscuitLifecycle from "./biscuit/biscuitLifecycle.js";
+import BoostSwitch from "./boostSwitch.js";
 import BiscuitContainer from "./container.js";
 import Conveyor from "./conveyor.js";
 import Extruder from "./extruder.js";
@@ -16,6 +17,7 @@ const Machine = () => {
   const [motorWorking, setMotorWorking] = useState(false);
   const [stamping, setStamping] = useState(false);
   const [animationState, setAnimationState] = useState("running");
+  const [fasterHeating, setFasterHeating] = useState(false);
 
   useEffect(() => {
     if (state === "Paused") setAnimationState("paused");
@@ -34,7 +36,11 @@ const Machine = () => {
         </Col>
 
         <Col md={{ span: 2, offset: 1 }}>
-          <Oven machineState={state} setMotorWorking={setMotorWorking} />
+          <Oven
+            machineState={state}
+            setMotorWorking={setMotorWorking}
+            fasterHeating={fasterHeating}
+          />
         </Col>
       </Row>
 
@@ -75,6 +81,10 @@ const Machine = () => {
         <Col md={{ span: 2, offset: 2 }}>
           <Switch onChange={setState} />
         </Col>
+      </Row>
+
+      <Row>
+        <BoostSwitch onChange={() => setFasterHeating(!fasterHeating)} />
       </Row>
     </Container>
   );
