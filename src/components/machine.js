@@ -22,6 +22,7 @@ const Machine = () => {
     constants.animationState.running
   );
   const [fasterHeating, setFasterHeating] = useState(false);
+  const [bakedBiscuitsCount, setBakedBiscuitsCount] = useState(0);
 
   useEffect(() => {
     if (state === constants.machineState.paused)
