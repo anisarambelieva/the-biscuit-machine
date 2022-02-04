@@ -22,6 +22,7 @@ const Machine = () => {
     constants.animationState.running
   );
   const [fasterHeating, setFasterHeating] = useState(false);
+  const [bakedBiscuitsCount, setBakedBiscuitsCount] = useState(0);
 
   useEffect(() => {
     if (state === constants.machineState.paused)
@@ -55,6 +56,8 @@ const Machine = () => {
             animationState={animationState}
             onStamp={setStamping}
             machineState={state}
+            setBakedBiscuitsCount={setBakedBiscuitsCount}
+            bakedBiscuitsCount={bakedBiscuitsCount}
           />
         )}
       </Row>
@@ -90,6 +93,10 @@ const Machine = () => {
 
       <Row>
         <BoostSwitch onChange={() => setFasterHeating(!fasterHeating)} />
+      </Row>
+
+      <Row>
+        <div>{bakedBiscuitsCount} baked biscuits</div>
       </Row>
     </Container>
   );

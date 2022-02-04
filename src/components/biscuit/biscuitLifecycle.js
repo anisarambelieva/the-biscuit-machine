@@ -1,13 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Col } from "react-bootstrap";
 
 import BakedBiscuit from "./bakedBiscuit.js";
 import Dough from "./dough.js";
 import Biscuit from "./rawBiscuit.js";
 
-const BiscuitLifecycle = ({ animationState, onStamp, machineState }) => {
+const BiscuitLifecycle = ({
+  animationState,
+  onStamp,
+  machineState,
+  setBakedBiscuitsCount,
+  bakedBiscuitsCount,
+}) => {
   const [stamped, setStamped] = useState(false);
   const [baked, setBaked] = useState(false);
+
+  useEffect(() => {
+    if (baked) {
+      setBakedBiscuitsCount((bakedBiscuitsCount) => bakedBiscuitsCount + 1);
+    }
+  }, [baked, setBakedBiscuitsCount]);
 
   return (
     <>
