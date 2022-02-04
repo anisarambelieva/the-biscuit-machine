@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import * as constants from "../constants.js";
+
 const Oven = ({ machineState, setMotorWorking, fasterHeating }) => {
   const [ovenDegrees, setOvenDegrees] = useState(0);
   const [heatingElement, setHeatingElement] = useState(false);
@@ -16,12 +18,12 @@ const Oven = ({ machineState, setMotorWorking, fasterHeating }) => {
 
   useEffect(() => {
     if (
-      machineState === "On" ||
-      (machineState === "Paused" && ovenDegrees !== 0)
+      machineState === constants.machineState.on ||
+      (machineState === constants.machineState.paused && ovenDegrees !== 0)
     ) {
       if (ovenDegrees < 220 && !heatingElement) setHeatingElement(true);
       else if (ovenDegrees > 239) setHeatingElement(false);
-    } else if (machineState === "Off") {
+    } else if (machineState === constants.machineState.off) {
       setHeatingElement(false);
     }
   }, [machineState, ovenDegrees, heatingElement]);
@@ -43,7 +45,7 @@ const Oven = ({ machineState, setMotorWorking, fasterHeating }) => {
   }, [heatingElement, ovenDegrees, heatingTimeout]);
 
   useEffect(() => {
-    if (ovenDegrees >= 220 && machineState === "On") {
+    if (ovenDegrees >= 220 && machineState === constants.machineState.on) {
       setMotorWorking(true);
     }
   }, [ovenDegrees, machineState, setMotorWorking]);

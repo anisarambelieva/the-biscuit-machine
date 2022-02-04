@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import * as constants from "../constants.js";
+
 const Motor = ({
   machineState,
   setMotorWorking,
@@ -9,7 +11,7 @@ const Motor = ({
   const [motorLabel, setMotorLabel] = useState("turned off");
 
   useEffect(() => {
-    if (machineState === "Paused") {
+    if (machineState === constants.machineState.paused) {
       setMotorLabel("paused");
     } else if (motorWorking) {
       setMotorLabel("working");
@@ -25,7 +27,7 @@ const Motor = ({
   useEffect(() => {
     let timer;
 
-    if (motorWorking && machineState === "Off") {
+    if (motorWorking && machineState === constants.machineState.off) {
       timer = setTimeout(() => {
         setMotorWorking(false);
       }, 17000);
