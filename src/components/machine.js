@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 import BiscuitLifecycle from "./biscuit/biscuitLifecycle.js";
+import BoostSwitch from "./boostSwitch.js";
 import BiscuitContainer from "./container.js";
 import Conveyor from "./conveyor.js";
 import Extruder from "./extruder.js";
@@ -75,6 +76,10 @@ const Machine = () => {
         <Col md={{ span: 2, offset: 2 }}>
           <Switch onChange={setState} />
         </Col>
+      </Row>
+
+      <Row>
+        <BoostSwitch />
       </Row>
     </Container>
   );
