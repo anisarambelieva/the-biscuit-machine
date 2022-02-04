@@ -56,6 +56,8 @@ const Machine = () => {
             animationState={animationState}
             onStamp={setStamping}
             machineState={state}
+            setBakedBiscuitsCount={setBakedBiscuitsCount}
+            bakedBiscuitsCount={bakedBiscuitsCount}
           />
         )}
       </Row>
