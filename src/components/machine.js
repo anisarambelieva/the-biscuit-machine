@@ -18,12 +18,15 @@ const Machine = () => {
   const [conveyorWorking, setConveyorWorking] = useState(false);
   const [motorWorking, setMotorWorking] = useState(false);
   const [stamping, setStamping] = useState(false);
-  const [animationState, setAnimationState] = useState("running");
+  const [animationState, setAnimationState] = useState(
+    constants.animationState.running
+  );
   const [fasterHeating, setFasterHeating] = useState(false);
 
   useEffect(() => {
-    if (state === constants.machineState.paused) setAnimationState("paused");
-    else setAnimationState("running");
+    if (state === constants.machineState.paused)
+      setAnimationState(constants.animationState.paused);
+    else setAnimationState(constants.animationState.running);
   }, [animationState, state]);
 
   return (
