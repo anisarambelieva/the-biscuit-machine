@@ -17,7 +17,7 @@ const Switch = ({ onChange }) => (
   >
     <p>Switch</p>
     <SwitchButton
-      onClick={() => onChange("On")}
+      onClick={() => onChange(constants.machineState.on)}
       style={{ marginRight: "5px", backgroundColor: "#AB8281", border: "gray" }}
     >
       On
