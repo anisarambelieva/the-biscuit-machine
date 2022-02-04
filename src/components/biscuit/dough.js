@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./styles/dough.css";
 
+import * as constants from "../constants.js";
+
 const Dough = ({ onAnimationEnd, state, onStamp, machineState }) => {
   const [animationsCount, setAnimationsCount] = useState(1);
   const [className, setClassName] = useState("dough animatedDough");
@@ -10,7 +12,7 @@ const Dough = ({ onAnimationEnd, state, onStamp, machineState }) => {
     let timer1, timer2;
 
     if (animationsCount === 4) {
-      if (machineState !== "Off") {
+      if (machineState !== constants.machineState.off) {
         setClassName("dough");
 
         timer1 = setTimeout(() => {

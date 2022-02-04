@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
+import * as constants from "../constants.js";
+
 import BiscuitLifecycle from "./biscuit/biscuitLifecycle.js";
 import BoostSwitch from "./boostSwitch.js";
 import BiscuitContainer from "./container.js";
@@ -12,7 +14,7 @@ import Stamper from "./stamper/stamper.js";
 import Switch from "./switch.js";
 
 const Machine = () => {
-  const [state, setState] = useState("Off");
+  const [state, setState] = useState(constants.machineState.off);
   const [conveyorWorking, setConveyorWorking] = useState(false);
   const [motorWorking, setMotorWorking] = useState(false);
   const [stamping, setStamping] = useState(false);

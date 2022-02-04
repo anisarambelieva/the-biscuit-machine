@@ -21,7 +21,7 @@ const Oven = ({ machineState, setMotorWorking, fasterHeating }) => {
     ) {
       if (ovenDegrees < 220 && !heatingElement) setHeatingElement(true);
       else if (ovenDegrees > 239) setHeatingElement(false);
-    } else if (machineState === "Off") {
+    } else if (machineState === constants.machineState.off) {
       setHeatingElement(false);
     }
   }, [machineState, ovenDegrees, heatingElement]);

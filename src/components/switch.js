@@ -1,6 +1,8 @@
 import { Button } from "react-bootstrap";
 import styled from "styled-components";
 
+import * as constants from "../constants.js";
+
 const SwitchButton = styled(Button)`
   padding: 0 3px;
 `;
@@ -29,7 +31,7 @@ const Switch = ({ onChange }) => (
     </SwitchButton>
 
     <SwitchButton
-      onClick={() => onChange("Off")}
+      onClick={() => onChange(constants.machineState.off)}
       style={{ backgroundColor: "#AB8281", border: "gray" }}
     >
       Off
