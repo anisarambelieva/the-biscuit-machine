@@ -17,6 +17,7 @@ const Machine = () => {
   const [motorWorking, setMotorWorking] = useState(false);
   const [stamping, setStamping] = useState(false);
   const [animationState, setAnimationState] = useState("running");
+  const [fasterHeating, setFasterHeating] = useState(false);
 
   useEffect(() => {
     if (state === "Paused") setAnimationState("paused");
