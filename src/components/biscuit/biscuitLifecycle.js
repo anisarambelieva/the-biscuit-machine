@@ -19,7 +19,7 @@ const BiscuitLifecycle = ({
     if (baked) {
       setBakedBiscuitsCount((bakedBiscuitsCount) => bakedBiscuitsCount + 1);
     }
-  }, [baked]);
+  }, [baked, setBakedBiscuitsCount]);
 
   return (
     <>
