@@ -7,12 +7,13 @@ const Dough = ({ onAnimationEnd, state, onStamp, machineState }) => {
 
   const handleAnimationEnd = () => {
     setAnimationsCount(animationsCount + 1);
+    let timer1, timer2;
 
     if (animationsCount === 4) {
       if (machineState !== "Off") {
         setClassName("dough");
 
-        setTimeout(() => {
+        timer1 = setTimeout(() => {
           setClassName("dough animatedDough");
           setAnimationsCount(1);
         }, 100);
@@ -20,12 +21,17 @@ const Dough = ({ onAnimationEnd, state, onStamp, machineState }) => {
 
       onAnimationEnd(true);
 
-      setTimeout(() => {
+      timer2 = setTimeout(() => {
         onStamp(false);
       }, 1000);
     } else if (animationsCount === 2) {
       onStamp(true);
     }
+
+    return () => {
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+    };
   };
 
   return (
