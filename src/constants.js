@@ -3,3 +3,8 @@ export const machineState = {
   paused: "Paused",
   off: "Off",
 };
+
+export const animationState = {
+  running: "running",
+  paused: "paused",
+};
