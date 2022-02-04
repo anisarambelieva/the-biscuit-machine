@@ -23,11 +23,15 @@ const Motor = ({
   }, [motorWorking, setConveyorWorking]);
 
   useEffect(() => {
+    let timer;
+
     if (motorWorking && machineState === "Off") {
-      setTimeout(() => {
+      timer = setTimeout(() => {
         setMotorWorking(false);
       }, 17000);
     }
+
+    return () => clearTimeout(timer);
   }, [machineState, motorWorking, setMotorWorking]);
 
   return (
