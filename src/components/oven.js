@@ -6,7 +6,10 @@ const Oven = ({ machineState, setMotorWorking }) => {
   const [color, setColor] = useState("");
 
   useEffect(() => {
-    if (machineState === "On") {
+    if (
+      machineState === "On" ||
+      (machineState === "Paused" && ovenDegrees !== 0)
+    ) {
       if (ovenDegrees < 220 && !heatingElement) setHeatingElement(true);
       else if (ovenDegrees > 239) setHeatingElement(false);
     } else if (machineState === "Off") {
