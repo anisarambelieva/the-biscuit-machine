@@ -146,6 +146,14 @@ exports[`<Machine /> should match snapshot 1`] = `
         </div>
       </form>
     </div>
+    <div
+      class="row"
+    >
+      <div>
+        0
+         baked biscuits
+      </div>
+    </div>
   </div>
 </div>
 `;
