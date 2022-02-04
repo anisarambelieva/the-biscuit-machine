@@ -92,6 +92,10 @@ const Machine = () => {
       <Row>
         <BoostSwitch onChange={() => setFasterHeating(!fasterHeating)} />
       </Row>
+
+      <Row>
+        <div>{bakedBiscuitsCount} baked biscuits</div>
+      </Row>
     </Container>
   );
 };
