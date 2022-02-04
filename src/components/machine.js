@@ -22,7 +22,7 @@ const Machine = () => {
   const [fasterHeating, setFasterHeating] = useState(false);
 
   useEffect(() => {
-    if (state === "Paused") setAnimationState("paused");
+    if (state === constants.machineState.paused) setAnimationState("paused");
     else setAnimationState("running");
   }, [animationState, state]);
 

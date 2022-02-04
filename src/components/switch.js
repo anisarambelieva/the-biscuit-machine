@@ -24,7 +24,7 @@ const Switch = ({ onChange }) => (
     </SwitchButton>
 
     <SwitchButton
-      onClick={() => onChange("Paused")}
+      onClick={() => onChange(constants.machineState.paused)}
       style={{ marginRight: "5px", backgroundColor: "#AB8281", border: "gray" }}
     >
       Paused

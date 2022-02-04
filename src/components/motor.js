@@ -11,7 +11,7 @@ const Motor = ({
   const [motorLabel, setMotorLabel] = useState("turned off");
 
   useEffect(() => {
-    if (machineState === "Paused") {
+    if (machineState === constants.machineState.paused) {
       setMotorLabel("paused");
     } else if (motorWorking) {
       setMotorLabel("working");
