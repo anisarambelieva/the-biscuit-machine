@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./styles/dough.css";
 
-import * as constants from "../constants.js";
+import * as constants from "../../constants.js";
 
 const Dough = ({ onAnimationEnd, state, onStamp, machineState }) => {
   const [animationsCount, setAnimationsCount] = useState(1);
