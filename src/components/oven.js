@@ -15,15 +15,19 @@ const Oven = ({ machineState, setMotorWorking }) => {
   }, [machineState, ovenDegrees, heatingElement]);
 
   useEffect(() => {
+    let timer;
+
     if (heatingElement) {
-      setTimeout(() => {
+      timer = setTimeout(() => {
         if (ovenDegrees < 240) setOvenDegrees(ovenDegrees + 1);
       }, 1000);
     } else {
-      setTimeout(() => {
+      timer = setTimeout(() => {
         if (ovenDegrees > 0) setOvenDegrees(ovenDegrees - 1);
       }, 1000);
     }
+
+    return () => clearTimeout(timer);
   }, [heatingElement, ovenDegrees]);
 
   useEffect(() => {
