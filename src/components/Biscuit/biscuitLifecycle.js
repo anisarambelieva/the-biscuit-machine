@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { Col } from "react-bootstrap";
 
+import Dough from "./Dough";
+import Biscuit from "./RawBiscuit";
 import BakedBiscuit from "./bakedBiscuit.js";
-import Dough from "./dough.js";
-import Biscuit from "./rawBiscuit.js";
 
 const BiscuitLifecycle = ({
   animationState,

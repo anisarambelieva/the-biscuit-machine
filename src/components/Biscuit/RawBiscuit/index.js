@@ -1,4 +1,4 @@
-import "./styles/biscuit.css";
+import "./style.css";
 
 let animationsCount = 0;
 const Biscuit = ({ onAnimationEnd, state, onStamp }) => {
