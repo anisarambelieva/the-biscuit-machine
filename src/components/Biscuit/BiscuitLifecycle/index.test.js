@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 
-import BiscuitLifecycle from "../biscuitLifecycle.js";
+import BiscuitLifecycle from "./index.js";
 
 describe("<BiscuitLifecycle />", () => {
   it("should match snapshot", () => {
