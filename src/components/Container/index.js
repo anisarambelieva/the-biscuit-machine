@@ -1,13 +1,5 @@
-const BiscuitContainer = () => (
-  <p
-    style={{
-      backgroundColor: "#DCD2CC",
-      padding: "5px",
-      borderRadius: "5px",
-    }}
-  >
-    Container
-  </p>
-);
+import "./style.css";
+
+const BiscuitContainer = () => <p className="biscuitContainer">Container</p>;
 
 export default BiscuitContainer;
