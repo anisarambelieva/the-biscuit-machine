@@ -9,7 +9,6 @@ module.exports = {
       { requireReturnForObjectLiteral: true },
     ],
     "react/no-array-index-key": "error",
-    "import/extensions": ["error", "always"],
     "import/order": [
       "error",
       {
