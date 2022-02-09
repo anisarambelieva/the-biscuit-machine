@@ -6,10 +6,10 @@ import BiscuitLifecycle from "../Biscuit/BiscuitLifecycle";
 import BiscuitContainer from "../Container";
 import Conveyor from "../Conveyor";
 import Extruder from "../Extruder";
+import Motor from "../Motor";
 import Stamper from "../Stamper";
 import Switch from "../Switch";
 import BoostSwitch from "../boostSwitch.js";
-import Motor from "../motor.js";
 import Oven from "../oven.js";
 
 const Machine = () => {
