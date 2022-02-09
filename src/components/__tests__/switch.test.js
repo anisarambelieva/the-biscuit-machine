@@ -1,6 +1,6 @@
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 
-import Machine from "../machine.js";
+import Machine from "../Machine";
 
 describe("<Switch />", () => {
   it("should start heating oven", async () => {

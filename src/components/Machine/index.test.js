@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 
-import Machine from "../machine.js";
+import Machine from "./index.js";
 
 describe("<Machine />", () => {
   it("should match snapshot", () => {
