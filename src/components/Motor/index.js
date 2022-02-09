@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+import "./style.css";
 import * as constants from "../../constants.js";
 
 const Motor = ({
@@ -36,17 +37,7 @@ const Motor = ({
     return () => clearTimeout(timer);
   }, [machineState, motorWorking, setMotorWorking]);
 
-  return (
-    <p
-      style={{
-        backgroundColor: "#ABDEE0",
-        padding: "5px",
-        borderRadius: "5px",
-      }}
-    >
-      Motor: {motorLabel}
-    </p>
-  );
+  return <p className="motor">Motor: {motorLabel}</p>;
 };
 
 export default Motor;
