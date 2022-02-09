@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import * as constants from "../constants.js";
+import * as constants from "../../constants.js";
 
 const Oven = ({ machineState, setMotorWorking, fasterHeating }) => {
   const [ovenDegrees, setOvenDegrees] = useState(0);
