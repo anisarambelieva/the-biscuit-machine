@@ -1,0 +1,8 @@
+.extruder {
+  background-color: #fadcd9;
+  position: absolute;
+  text-align: center;
+  height: 50px;
+  width: 100px;
+  border-radius: 5px;
+}
