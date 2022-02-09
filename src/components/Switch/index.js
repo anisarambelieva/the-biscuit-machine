@@ -1,7 +1,7 @@
 import { Button } from "react-bootstrap";
 import styled from "styled-components";
 
-import * as constants from "../constants.js";
+import * as constants from "../../constants.js";
 
 const SwitchButton = styled(Button)`
   padding: 0 3px;

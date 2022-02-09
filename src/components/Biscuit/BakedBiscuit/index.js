@@ -1,27 +1,25 @@
-import "./styles/biscuit.css";
+import "./style.css";
 
 let animationsCount = 0;
-const Biscuit = ({ onAnimationEnd, state, onStamp }) => {
+const BakedBiscuit = ({ state, onBaked }) => {
   const handleAnimationEnd = () => {
     animationsCount++;
 
-    if (animationsCount % 2 === 0) {
-      onAnimationEnd(true);
-      onStamp(false);
+    if (animationsCount % 3 === 0) {
+      onBaked(false);
     }
   };
-
   return (
     <div
       onAnimationEnd={handleAnimationEnd}
-      className="biscuit"
+      className="animatedBakedBiscuit"
       style={{
         WebkitAnimationPlayState: state,
       }}
     >
-      Biscuit
+      Baked
     </div>
   );
 };
 
-export default Biscuit;
+export default BakedBiscuit;

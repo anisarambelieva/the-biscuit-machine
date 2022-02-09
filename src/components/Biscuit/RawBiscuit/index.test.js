@@ -1,10 +1,10 @@
 import { render } from "@testing-library/react";
 
-import Machine from "../machine.js";
+import Biscuit from "./index.js";
 
-describe("<Machine />", () => {
+describe("<Biscuit />", () => {
   it("should match snapshot", () => {
-    const { container } = render(<Machine />);
+    const { container } = render(<Biscuit />);
 
     expect(container).toMatchSnapshot();
   });

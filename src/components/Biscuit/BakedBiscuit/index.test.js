@@ -1,10 +1,10 @@
 import { render } from "@testing-library/react";
 
-import Biscuit from "../rawBiscuit.js";
+import BakedBiscuit from "./index.js";
 
-describe("<Biscuit />", () => {
+describe("<BakedBiscuit />", () => {
   it("should match snapshot", () => {
-    const { container } = render(<Biscuit />);
+    const { container } = render(<BakedBiscuit />);
 
     expect(container).toMatchSnapshot();
   });

@@ -1,4 +1,4 @@
-import Machine from "./components/machine.js";
+import Machine from "../components/Machine";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {

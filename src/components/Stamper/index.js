@@ -1,4 +1,4 @@
-import "./stamper.css";
+import "./style.css";
 
 const Stamper = ({ stamp, animationState }) => (
   <div
