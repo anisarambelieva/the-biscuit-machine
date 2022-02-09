@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+import "./style.css";
 import * as constants from "../../constants.js";
 
 const Oven = ({ machineState, setMotorWorking, fasterHeating }) => {
@@ -60,11 +61,9 @@ const Oven = ({ machineState, setMotorWorking, fasterHeating }) => {
 
   return (
     <div
+      className="oven"
       style={{
-        backgroundColor: "#f2f2f2",
-        padding: "5px",
         borderBottom: `15px solid ${color}`,
-        borderRadius: "5px",
       }}
     >
       <p style={{ margin: 0 }}>{ovenDegrees}</p>
