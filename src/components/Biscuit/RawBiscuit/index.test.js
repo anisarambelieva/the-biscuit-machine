@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 
-import Biscuit from "../rawBiscuit.js";
+import Biscuit from "./index.js";
 
 describe("<Biscuit />", () => {
   it("should match snapshot", () => {
