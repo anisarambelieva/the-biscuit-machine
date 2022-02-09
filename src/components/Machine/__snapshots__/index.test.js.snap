@@ -85,7 +85,7 @@ exports[`<Machine /> should match snapshot 1`] = `
         class="col-md-1"
       >
         <p
-          style="background-color: rgb(171, 222, 224); padding: 5px; border-radius: 5px;"
+          class="motor"
         >
           Motor: 
           turned off
