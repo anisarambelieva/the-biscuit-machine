@@ -4,11 +4,11 @@ import { Container, Row, Col } from "react-bootstrap";
 import * as constants from "../../constants.js";
 import BiscuitLifecycle from "../Biscuit/BiscuitLifecycle";
 import BiscuitContainer from "../Container";
+import Extruder from "../Extruder";
 import Stamper from "../Stamper";
 import Switch from "../Switch";
 import BoostSwitch from "../boostSwitch.js";
 import Conveyor from "../conveyor.js";
-import Extruder from "../extruder.js";
 import Motor from "../motor.js";
 import Oven from "../oven.js";
 
