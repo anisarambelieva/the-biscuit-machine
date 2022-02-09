@@ -72,7 +72,7 @@ exports[`<Machine /> should match snapshot 1`] = `
         class="col-md-2 offset-md-5"
       >
         <p
-          style="background-color: rgb(220, 210, 204); padding: 5px; border-radius: 5px;"
+          class="biscuitContainer"
         >
           Container
         </p>
