@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 
-import App from "./App.js";
+import App from "./index.js";
 
 test("renders The Biscuit Machine heading", () => {
   render(<App />);
