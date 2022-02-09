@@ -13,7 +13,7 @@ exports[`<Machine /> should match snapshot 1`] = `
         class="col-md-1"
       >
         <div
-          style="background-color: rgb(250, 220, 217); position: absolute; text-align: center; height: 50px; width: 100px; border-radius: 5px;"
+          class="extruder"
         >
           Extruder
         </div>
