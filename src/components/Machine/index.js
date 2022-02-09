@@ -4,13 +4,13 @@ import { Container, Row, Col } from "react-bootstrap";
 import * as constants from "../../constants.js";
 import BiscuitLifecycle from "../Biscuit/biscuitLifecycle.js";
 import Stamper from "../Stamper";
+import Switch from "../Switch";
 import BoostSwitch from "../boostSwitch.js";
 import BiscuitContainer from "../container.js";
 import Conveyor from "../conveyor.js";
 import Extruder from "../extruder.js";
 import Motor from "../motor.js";
 import Oven from "../oven.js";
-import Switch from "../switch.js";
 
 const Machine = () => {
   const [state, setState] = useState(constants.machineState.off);
