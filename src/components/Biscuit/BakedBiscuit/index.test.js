@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 
-import BakedBiscuit from "../bakedBiscuit.js";
+import BakedBiscuit from "./index.js";
 
 describe("<BakedBiscuit />", () => {
   it("should match snapshot", () => {

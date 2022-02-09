@@ -1,4 +1,4 @@
-import "./styles/bakedBiscuit.css";
+import "./style.css";
 
 let animationsCount = 0;
 const BakedBiscuit = ({ state, onBaked }) => {
