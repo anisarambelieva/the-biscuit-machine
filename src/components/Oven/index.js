@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "./style.css";
 import * as constants from "../../constants.js";
 
-const Oven = ({ machineState, setMotorWorking, fasterHeating }) => {
+const useOven = (machineState, setMotorWorking, fasterHeating) => {
   const [ovenDegrees, setOvenDegrees] = useState(0);
   const [heatingElement, setHeatingElement] = useState(false);
   const [color, setColor] = useState("");
@@ -58,6 +58,19 @@ const Oven = ({ machineState, setMotorWorking, fasterHeating }) => {
     else if (ovenDegrees < 219) setColor("#f3946c");
     else if (ovenDegrees < 240) setColor("#f0703e");
   }, [ovenDegrees]);
+
+  return {
+    color,
+    ovenDegrees,
+  };
+};
+
+const Oven = ({ machineState, setMotorWorking, fasterHeating }) => {
+  const { color, ovenDegrees } = useOven(
+    machineState,
+    setMotorWorking,
+    fasterHeating
+  );
 
   return (
     <div
