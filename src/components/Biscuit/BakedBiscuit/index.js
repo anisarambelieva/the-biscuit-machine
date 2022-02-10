@@ -1,7 +1,8 @@
 import "./style.css";
 
-let animationsCount = 0;
-const BakedBiscuit = ({ state, onBaked }) => {
+const useBakedBiscuit = (onBaked) => {
+  let animationsCount = 0;
+
   const handleAnimationEnd = () => {
     animationsCount++;
 
@@ -9,6 +10,13 @@ const BakedBiscuit = ({ state, onBaked }) => {
       onBaked(false);
     }
   };
+
+  return handleAnimationEnd;
+};
+
+const BakedBiscuit = ({ state, onBaked }) => {
+  const handleAnimationEnd = useBakedBiscuit(onBaked);
+
   return (
     <div
       onAnimationEnd={handleAnimationEnd}
