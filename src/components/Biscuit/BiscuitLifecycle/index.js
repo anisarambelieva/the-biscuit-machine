@@ -5,13 +5,7 @@ import BakedBiscuit from "../BakedBiscuit";
 import Dough from "../Dough";
 import Biscuit from "../RawBiscuit";
 
-const BiscuitLifecycle = ({
-  animationState,
-  onStamp,
-  machineState,
-  setBakedBiscuitsCount,
-  bakedBiscuitsCount,
-}) => {
+const useBiscuitLifecycle = (setBakedBiscuitsCount, bakedBiscuitsCount) => {
   const [stamped, setStamped] = useState(false);
   const [baked, setBaked] = useState(false);
 
@@ -20,6 +14,26 @@ const BiscuitLifecycle = ({
       setBakedBiscuitsCount((bakedBiscuitsCount) => bakedBiscuitsCount + 1);
     }
   }, [baked, setBakedBiscuitsCount]);
+
+  return {
+    stamped,
+    setStamped,
+    baked,
+    setBaked,
+  };
+};
+
+const BiscuitLifecycle = ({
+  animationState,
+  onStamp,
+  machineState,
+  setBakedBiscuitsCount,
+  bakedBiscuitsCount,
+}) => {
+  const { stamped, setStamped, baked, setBaked } = useBiscuitLifecycle(
+    setBakedBiscuitsCount,
+    bakedBiscuitsCount
+  );
 
   return (
     <>
