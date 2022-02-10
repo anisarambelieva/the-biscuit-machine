@@ -1,15 +1,9 @@
 import "./style.css";
 
-let animationsCount = 0;
-const Biscuit = ({ onAnimationEnd, state, onStamp }) => {
-  const handleAnimationEnd = () => {
-    animationsCount++;
+import useBiscuit from "./hook.js";
 
-    if (animationsCount % 2 === 0) {
-      onAnimationEnd(true);
-      onStamp(false);
-    }
-  };
+const Biscuit = ({ onAnimationEnd, state, onStamp }) => {
+  const { handleAnimationEnd } = useBiscuit(onAnimationEnd, onStamp);
 
   return (
     <div
