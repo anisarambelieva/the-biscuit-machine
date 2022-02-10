@@ -8,14 +8,15 @@ The Machine operates in the following way:
 - If the operator selects “Pause", all movement is stopped immediately but the oven is kept heated.
 - When “Off” is selected, the machine gets shut down leaving nothing on the conveyor belt.
 
+![Screenshot_1](https://user-images.githubusercontent.com/36369561/153406666-b7f4bdec-3d09-40ca-a527-1ca63efa8ca1.png)
 
-<img width="986" alt="Screenshot 2022-01-13 at 9 28 10" src="https://user-images.githubusercontent.com/36369561/149284945-fb6e7b0a-63dc-4a64-944d-c25ec087d10e.png">
+![Screenshot_7](https://user-images.githubusercontent.com/36369561/153406668-1958b698-eb34-40db-b27e-aabce2fd0350.png)
 
-<img width="991" alt="Screenshot 2022-01-13 at 9 32 00" src="https://user-images.githubusercontent.com/36369561/149285457-ae98147e-9a61-4f1a-b092-69965536f024.png">
+![Screenshot_8](https://user-images.githubusercontent.com/36369561/153406676-490dbd85-a9fe-4344-966e-d7daef701325.png)
 
-<img width="987" alt="Screenshot 2022-01-13 at 9 32 47" src="https://user-images.githubusercontent.com/36369561/149285551-c2cf21ee-bb19-4b21-a7d7-529196ff6eb8.png">
+![Screenshot_10](https://user-images.githubusercontent.com/36369561/153406685-33e787d2-ebd5-4ff9-8e82-5a91675cf03c.png)
 
-<img width="977" alt="Screenshot 2022-01-13 at 9 33 53" src="https://user-images.githubusercontent.com/36369561/149285677-77ea9cc6-6a7e-4c10-891f-8e1511945554.png">
+![Screenshot_14](https://user-images.githubusercontent.com/36369561/153406688-3464c2dd-41b1-4cd4-a426-536df2f1bcbf.png)
 
 To start the app run the following commands:
 - `yarn`
