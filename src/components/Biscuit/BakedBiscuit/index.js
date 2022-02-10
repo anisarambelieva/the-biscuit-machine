@@ -1,18 +1,5 @@
 import "./style.css";
-
-const useBakedBiscuit = (onBaked) => {
-  let animationsCount = 0;
-
-  const handleAnimationEnd = () => {
-    animationsCount++;
-
-    if (animationsCount % 3 === 0) {
-      onBaked(false);
-    }
-  };
-
-  return handleAnimationEnd;
-};
+import useBakedBiscuit from "./hook.js";
 
 const BakedBiscuit = ({ state, onBaked }) => {
   const handleAnimationEnd = useBakedBiscuit(onBaked);
