@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 import "./style.css";
 import * as constants from "../../constants.js";
 
-const Motor = ({
+const useMotor = (
   machineState,
   setMotorWorking,
   motorWorking,
-  setConveyorWorking,
-}) => {
+  setConveyorWorking
+) => {
   const [motorLabel, setMotorLabel] = useState(constants.motorState.off);
 
   useEffect(() => {
@@ -36,6 +36,24 @@ const Motor = ({
 
     return () => clearTimeout(timer);
   }, [machineState, motorWorking, setMotorWorking]);
+
+  return {
+    motorLabel,
+  };
+};
+
+const Motor = ({
+  machineState,
+  setMotorWorking,
+  motorWorking,
+  setConveyorWorking,
+}) => {
+  const { motorLabel } = useMotor(
+    machineState,
+    setMotorWorking,
+    motorWorking,
+    setConveyorWorking
+  );
 
   return <p className="motor">Motor: {motorLabel}</p>;
 };
