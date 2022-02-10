@@ -3,7 +3,7 @@ import "./style.css";
 
 import * as constants from "../../../constants.js";
 
-const Dough = ({ onAnimationEnd, state, onStamp, machineState }) => {
+const useDough = (onAnimationEnd, onStamp, machineState) => {
   const [animationsCount, setAnimationsCount] = useState(1);
   const [className, setClassName] = useState("dough animatedDough");
 
@@ -35,6 +35,19 @@ const Dough = ({ onAnimationEnd, state, onStamp, machineState }) => {
       clearTimeout(timer2);
     };
   };
+
+  return {
+    handleAnimationEnd,
+    className,
+  };
+};
+
+const Dough = ({ onAnimationEnd, state, onStamp, machineState }) => {
+  const { handleAnimationEnd, className } = useDough(
+    onAnimationEnd,
+    onStamp,
+    machineState
+  );
 
   return (
     <div
