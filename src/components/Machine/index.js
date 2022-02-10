@@ -1,7 +1,5 @@
-import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
-import * as constants from "../../constants.js";
 import BiscuitLifecycle from "../Biscuit/BiscuitLifecycle";
 import BiscuitContainer from "../Container";
 import Conveyor from "../Conveyor";
@@ -12,22 +10,24 @@ import Stamper from "../Stamper";
 import Switch from "../Switch";
 import BoostSwitch from "../boostSwitch.js";
 
-const Machine = () => {
-  const [state, setState] = useState(constants.machineState.off);
-  const [conveyorWorking, setConveyorWorking] = useState(false);
-  const [motorWorking, setMotorWorking] = useState(false);
-  const [stamping, setStamping] = useState(false);
-  const [animationState, setAnimationState] = useState(
-    constants.animationState.running
-  );
-  const [fasterHeating, setFasterHeating] = useState(false);
-  const [bakedBiscuitsCount, setBakedBiscuitsCount] = useState(0);
+import useMachine from "./hook.js";
 
-  useEffect(() => {
-    if (state === constants.machineState.paused)
-      setAnimationState(constants.animationState.paused);
-    else setAnimationState(constants.animationState.running);
-  }, [animationState, state]);
+const Machine = () => {
+  const {
+    animationState,
+    stamping,
+    setStamping,
+    state,
+    setState,
+    fasterHeating,
+    setFasterHeating,
+    conveyorWorking,
+    setConveyorWorking,
+    motorWorking,
+    setMotorWorking,
+    bakedBiscuitsCount,
+    setBakedBiscuitsCount,
+  } = useMachine();
 
   return (
     <Container>
