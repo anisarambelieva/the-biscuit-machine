@@ -12,7 +12,7 @@ import Stamper from "../Stamper";
 import Switch from "../Switch";
 import BoostSwitch from "../boostSwitch.js";
 
-const Machine = () => {
+const useMachine = () => {
   const [state, setState] = useState(constants.machineState.off);
   const [conveyorWorking, setConveyorWorking] = useState(false);
   const [motorWorking, setMotorWorking] = useState(false);
@@ -28,6 +28,40 @@ const Machine = () => {
       setAnimationState(constants.animationState.paused);
     else setAnimationState(constants.animationState.running);
   }, [animationState, state]);
+
+  return {
+    animationState,
+    stamping,
+    setStamping,
+    state,
+    setState,
+    fasterHeating,
+    setFasterHeating,
+    conveyorWorking,
+    setConveyorWorking,
+    motorWorking,
+    setMotorWorking,
+    bakedBiscuitsCount,
+    setBakedBiscuitsCount,
+  };
+};
+
+const Machine = () => {
+  const {
+    animationState,
+    stamping,
+    setStamping,
+    state,
+    setState,
+    fasterHeating,
+    setFasterHeating,
+    conveyorWorking,
+    setConveyorWorking,
+    motorWorking,
+    setMotorWorking,
+    bakedBiscuitsCount,
+    setBakedBiscuitsCount,
+  } = useMachine();
 
   return (
     <Container>
